@@ -1,37 +1,27 @@
 .o-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 100;
+  height: 70px;
+  padding: 15px 0;
+  opacity: 0.9;
+  background-color: #0b0b45;
+  width: 100%;
 
-  @media screen and (max-width: 1024px) {
-    height: rem(90px);
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
     width: 100%;
-    position: fixed;
-  }
-
-  .m-logo {
-    margin-top: rem(55px);
-
-    @media screen and (max-width: 1024px) {
-      margin-top: rem(20px);
-    }
-  }
-
-  .a-btn-icon {
-    display: none;
-
-    @media screen and (max-width: 1024px) {
-      display: inline-flex;
-      border-left: 1px solid #eaeaea;
-      position: absolute;
-      top: rem(16px);
-      right: rem(80px);
-      width: rem(80px);
-      height: rem(60px);
-      align-items: center;
-      justify-content: center;
-      color: $white;
-    }
+    background-image: linear-gradient(to right, rgba(146, 197, 235, 0), #92c5eb 10%, #8da758 91%, rgba(139, 153, 22, 0));
   }
 
   .a-hamburger {
@@ -64,85 +54,11 @@
   }
 
   @media screen and (max-width: 1024px) {
-    background: $white;
-    border-bottom: 1px solid rgba($color: $Tuna, $alpha: 0.2);
-    .m-logo {
-      i {
-        transition: all 0.5s ease;
-        color: $Green;
-      }
-    }
-    .a-btn-icon {
-      transition: all 0.5s ease;
-      color: $Tuna;
-      border-color: rgba($color: $Tuna, $alpha: 0.2);
-    }
-
     .a-hamburger {
       border-color: rgba($color: $Tuna, $alpha: 0.2);
       span {
         transition: all 0.5s ease;
         background: $Tuna;
-      }
-    }
-
-    &--transparent {
-      background: transparent;
-      border-bottom: 1px solid rgba($color: #eaeaea, $alpha: 0.2);
-
-      .m-logo {
-        i {
-          transition: all 0.5s ease;
-          color: $white;
-        }
-      }
-      .a-btn-icon {
-        transition: all 0.5s ease;
-        color: $white;
-        border-left: 1px solid #eaeaea;
-      }
-
-      .a-hamburger {
-        border-left: 1px solid #eaeaea;
-        span {
-          transition: all 0.5s ease;
-          background: $white;
-        }
-      }
-    }
-  }
-
-  &--transparent {
-    &.o-header--opened {
-      background: $white;
-      border-bottom: 1px solid rgba($color: $Tuna, $alpha: 0.2);
-      .m-logo {
-        i {
-          transition: all 0.5s ease;
-          color: $Green;
-        }
-      }
-      .a-btn-icon {
-        transition: all 0.5s ease;
-        color: $Tuna;
-        border-color: rgba($color: $Tuna, $alpha: 0.2);
-      }
-
-      .a-hamburger {
-        border-color: rgba($color: $Tuna, $alpha: 0.2);
-        span {
-          transition: all 0.5s ease;
-          background: $Tuna;
-        }
-      }
-    }
-  }
-
-  &--white {
-    .m-logo {
-      i {
-        transition: all 0.5s ease;
-        color: $white;
       }
     }
   }

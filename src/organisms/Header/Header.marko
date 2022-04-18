@@ -5,20 +5,12 @@ $ {
    if (input.class) {
       classes.push(input.class);
    }
-
-  if (out.global.transparent) {
-   classes.push("o-header--transparent");
-  }
-
-  if (out.global.whiteLogo) {
-   classes.push("o-header--white");
-  }
 }
 <header class=classes data-component="Header">
    <div class="container-fluid">
       <Logo />
-      <ButtonIcon class="js-search-header" icon="search" />
       <Hamburger />
       <Nav />
+      <OtherNav />
    </div>
 </header>

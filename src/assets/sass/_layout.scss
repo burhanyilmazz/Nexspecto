@@ -1,7 +1,3 @@
-.clearfix {
-  @include clearFix();
-}
-
 .container {
   width: 100%;
   padding-right: 35px;
@@ -29,50 +25,12 @@
 
 .container-fluid {
   width: 100%;
-  padding: 0 214px 0 107px;
+  padding: 0 136px;
   margin-right: auto;
   margin-left: auto;
 
   @media screen and (max-width: 1024px) {
     padding-right: 35px;
     padding-left: 35px;
-  }
-}
-
-.container-fluid-mobile {
-  width: 100%;
-  padding: 0 214px 0 107px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-
-  @media screen and (max-width: 1024px) {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-.container-fluid-lp {
-  width: 100%;
-  padding: 0 0 0 77px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-
-  @media screen and (max-width: 1024px) {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-.color-foot {
-  background: #F7F7F7;
-  position: relative;
-  z-index: 12;
-  padding-top: 80px;
-  content-visibility: auto;
-
-  @media screen and (max-width: 480px) {
-    padding-top: rem(50px);
   }
 }

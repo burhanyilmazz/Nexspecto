@@ -1,60 +1,6 @@
 
-%icon-arrow-down {
-  content: "\EA01";
-}
-.icon-arrow-down {
-  &::before {
-    @extend %icon-arrow-down;
-  }
-}
-
-%icon-arrow-left {
-  content: "\EA02";
-}
-.icon-arrow-left {
-  &::before {
-    @extend %icon-arrow-left;
-  }
-}
-
-%icon-arrow-right {
-  content: "\EA03";
-}
-.icon-arrow-right {
-  &::before {
-    @extend %icon-arrow-right;
-  }
-}
-
-%icon-arrow-up {
-  content: "\EA04";
-}
-.icon-arrow-up {
-  &::before {
-    @extend %icon-arrow-up;
-  }
-}
-
-%icon-calendar {
-  content: "\EA05";
-}
-.icon-calendar {
-  &::before {
-    @extend %icon-calendar;
-  }
-}
-
-%icon-certificate {
-  content: "\EA06";
-}
-.icon-certificate {
-  &::before {
-    @extend %icon-certificate;
-  }
-}
-
 %icon-check {
-  content: "\EA07";
+  content: "\EA01";
 }
 .icon-check {
   &::before {
@@ -62,35 +8,8 @@
   }
 }
 
-%icon-circle-arrow {
-  content: "\EA08";
-}
-.icon-circle-arrow {
-  &::before {
-    @extend %icon-circle-arrow;
-  }
-}
-
-%icon-circle-error {
-  content: "\EA09";
-}
-.icon-circle-error {
-  &::before {
-    @extend %icon-circle-error;
-  }
-}
-
-%icon-circle-success {
-  content: "\EA0A";
-}
-.icon-circle-success {
-  &::before {
-    @extend %icon-circle-success;
-  }
-}
-
 %icon-close {
-  content: "\EA0B";
+  content: "\EA02";
 }
 .icon-close {
   &::before {
@@ -98,80 +17,26 @@
   }
 }
 
-%icon-download {
-  content: "\EA0C";
+%icon-discord {
+  content: "\EA03";
 }
-.icon-download {
+.icon-discord {
   &::before {
-    @extend %icon-download;
+    @extend %icon-discord;
   }
 }
 
-%icon-email {
-  content: "\EA0D";
+%icon-down {
+  content: "\EA04";
 }
-.icon-email {
+.icon-down {
   &::before {
-    @extend %icon-email;
-  }
-}
-
-%icon-ev {
-  content: "\EA0E";
-}
-.icon-ev {
-  &::before {
-    @extend %icon-ev;
-  }
-}
-
-%icon-facebook {
-  content: "\EA0F";
-}
-.icon-facebook {
-  &::before {
-    @extend %icon-facebook;
-  }
-}
-
-%icon-fax {
-  content: "\EA10";
-}
-.icon-fax {
-  &::before {
-    @extend %icon-fax;
-  }
-}
-
-%icon-filter {
-  content: "\EA11";
-}
-.icon-filter {
-  &::before {
-    @extend %icon-filter;
-  }
-}
-
-%icon-firinci {
-  content: "\EA12";
-}
-.icon-firinci {
-  &::before {
-    @extend %icon-firinci;
-  }
-}
-
-%icon-form {
-  content: "\EA13";
-}
-.icon-form {
-  &::before {
-    @extend %icon-form;
+    @extend %icon-down;
   }
 }
 
 %icon-instagram {
-  content: "\EA14";
+  content: "\EA05";
 }
 .icon-instagram {
   &::before {
@@ -179,17 +44,17 @@
   }
 }
 
-%icon-language {
-  content: "\EA15";
+%icon-left {
+  content: "\EA06";
 }
-.icon-language {
+.icon-left {
   &::before {
-    @extend %icon-language;
+    @extend %icon-left;
   }
 }
 
 %icon-linkedin {
-  content: "\EA16";
+  content: "\EA07";
 }
 .icon-linkedin {
   &::before {
@@ -197,71 +62,26 @@
   }
 }
 
-%icon-list {
-  content: "\EA17";
+%icon-mail {
+  content: "\EA08";
 }
-.icon-list {
+.icon-mail {
   &::before {
-    @extend %icon-list;
+    @extend %icon-mail;
   }
 }
 
-%icon-list2 {
-  content: "\EA18";
+%icon-medium {
+  content: "\EA09";
 }
-.icon-list2 {
+.icon-medium {
   &::before {
-    @extend %icon-list2;
-  }
-}
-
-%icon-logo-en {
-  content: "\EA19";
-}
-.icon-logo-en {
-  &::before {
-    @extend %icon-logo-en;
-  }
-}
-
-%icon-logo {
-  content: "\EA1A";
-}
-.icon-logo {
-  &::before {
-    @extend %icon-logo;
-  }
-}
-
-%icon-marka {
-  content: "\EA1B";
-}
-.icon-marka {
-  &::before {
-    @extend %icon-marka;
-  }
-}
-
-%icon-more {
-  content: "\EA1C";
-}
-.icon-more {
-  &::before {
-    @extend %icon-more;
-  }
-}
-
-%icon-phone {
-  content: "\EA1D";
-}
-.icon-phone {
-  &::before {
-    @extend %icon-phone;
+    @extend %icon-medium;
   }
 }
 
 %icon-play {
-  content: "\EA1E";
+  content: "\EA0A";
 }
 .icon-play {
   &::before {
@@ -269,26 +89,17 @@
   }
 }
 
-%icon-plus {
-  content: "\EA1F";
+%icon-reddit {
+  content: "\EA0B";
 }
-.icon-plus {
+.icon-reddit {
   &::before {
-    @extend %icon-plus;
-  }
-}
-
-%icon-product {
-  content: "\EA20";
-}
-.icon-product {
-  &::before {
-    @extend %icon-product;
+    @extend %icon-reddit;
   }
 }
 
 %icon-right {
-  content: "\EA21";
+  content: "\EA0C";
 }
 .icon-right {
   &::before {
@@ -296,66 +107,30 @@
   }
 }
 
-%icon-search {
-  content: "\EA22";
+%icon-send {
+  content: "\EA0D";
 }
-.icon-search {
+.icon-send {
   &::before {
-    @extend %icon-search;
+    @extend %icon-send;
   }
 }
 
-%icon-tariff {
-  content: "\EA23";
+%icon-telegram {
+  content: "\EA0E";
 }
-.icon-tariff {
+.icon-telegram {
   &::before {
-    @extend %icon-tariff;
+    @extend %icon-telegram;
   }
 }
 
 %icon-twitter {
-  content: "\EA24";
+  content: "\EA0F";
 }
 .icon-twitter {
   &::before {
     @extend %icon-twitter;
-  }
-}
-
-%icon-upload {
-  content: "\EA25";
-}
-.icon-upload {
-  &::before {
-    @extend %icon-upload;
-  }
-}
-
-%icon-usta {
-  content: "\EA26";
-}
-.icon-usta {
-  &::before {
-    @extend %icon-usta;
-  }
-}
-
-%icon-youtube {
-  content: "\EA27";
-}
-.icon-youtube {
-  &::before {
-    @extend %icon-youtube;
-  }
-}
-
-%icon-zanaatkar {
-  content: "\EA28";
-}
-.icon-zanaatkar {
-  &::before {
-    @extend %icon-zanaatkar;
   }
 }
 

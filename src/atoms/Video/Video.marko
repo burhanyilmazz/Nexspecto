@@ -1,0 +1,13 @@
+$ {
+    const src = input.src;
+    const classes = ["a-video"];
+
+    if (input.class) {
+        classes.push(input.class);
+    }
+}
+<div class=classes>
+    <video autoplay muted loop playsinline>
+        <source src=src type="video/mp4">
+    </video>
+</div>

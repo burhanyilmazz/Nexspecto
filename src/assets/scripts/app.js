@@ -12,7 +12,6 @@ import Header           from  '../../../src/organisms/Header/Header';
 
 const Components = {
   LazyLoad,
-  OnLoadModal,
 
   FormInput,
   FormTextarea,
