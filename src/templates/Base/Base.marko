@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><include(input.title)/></title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/styles/vendors.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/styles/app.min.css">
+    <include(input.head) />
+
+  </head>
+  <body>
+    <Header />
+    <main>
+      <include(input.body)/>
+    </main>
+    <Footer />
+
+    <script defer src="../../assets/scripts/vendors.js" />
+    <include(input.afterFooter)/>
+    <script defer src="../../assets/scripts/app.js" />
+
+  </body>
+</html>

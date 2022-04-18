@@ -1,0 +1,12 @@
+{
+  "@title <Title>": {},
+  "@header <Header>": {},
+  "@body <Body>": {},
+  "@foot <Foot>": {},
+  "@id" : "string",
+  "@type" : "string",
+  "@component" : "string",
+  "@close": "boolean",
+  "@url": "string",
+  "@timeout": "string"
+}

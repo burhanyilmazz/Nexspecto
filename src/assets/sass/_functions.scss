@@ -1,0 +1,29 @@
+$z-index: (
+  modal: 15,
+  modalPlate: 14,
+  header: 13,
+  backdrop: 14,
+  mobileMenu: 3,
+  mobileMenuTop: 4
+);
+
+$container-width: 1200px;
+$narrow-container-width: 980px;
+$mobile-container-width: 100%;
+$m-container-pad: 20px;
+$iconFontName: "IconFont";
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@function em($fontSize, $lineHeight, $size) {
+  $newSize: $fontSize * $lineHeight;
+  $emSize: $newSize / $size;
+  @return #{$emSize}em;
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}

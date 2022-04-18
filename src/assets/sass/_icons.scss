@@ -1,0 +1,361 @@
+
+%icon-arrow-down {
+  content: "\EA01";
+}
+.icon-arrow-down {
+  &::before {
+    @extend %icon-arrow-down;
+  }
+}
+
+%icon-arrow-left {
+  content: "\EA02";
+}
+.icon-arrow-left {
+  &::before {
+    @extend %icon-arrow-left;
+  }
+}
+
+%icon-arrow-right {
+  content: "\EA03";
+}
+.icon-arrow-right {
+  &::before {
+    @extend %icon-arrow-right;
+  }
+}
+
+%icon-arrow-up {
+  content: "\EA04";
+}
+.icon-arrow-up {
+  &::before {
+    @extend %icon-arrow-up;
+  }
+}
+
+%icon-calendar {
+  content: "\EA05";
+}
+.icon-calendar {
+  &::before {
+    @extend %icon-calendar;
+  }
+}
+
+%icon-certificate {
+  content: "\EA06";
+}
+.icon-certificate {
+  &::before {
+    @extend %icon-certificate;
+  }
+}
+
+%icon-check {
+  content: "\EA07";
+}
+.icon-check {
+  &::before {
+    @extend %icon-check;
+  }
+}
+
+%icon-circle-arrow {
+  content: "\EA08";
+}
+.icon-circle-arrow {
+  &::before {
+    @extend %icon-circle-arrow;
+  }
+}
+
+%icon-circle-error {
+  content: "\EA09";
+}
+.icon-circle-error {
+  &::before {
+    @extend %icon-circle-error;
+  }
+}
+
+%icon-circle-success {
+  content: "\EA0A";
+}
+.icon-circle-success {
+  &::before {
+    @extend %icon-circle-success;
+  }
+}
+
+%icon-close {
+  content: "\EA0B";
+}
+.icon-close {
+  &::before {
+    @extend %icon-close;
+  }
+}
+
+%icon-download {
+  content: "\EA0C";
+}
+.icon-download {
+  &::before {
+    @extend %icon-download;
+  }
+}
+
+%icon-email {
+  content: "\EA0D";
+}
+.icon-email {
+  &::before {
+    @extend %icon-email;
+  }
+}
+
+%icon-ev {
+  content: "\EA0E";
+}
+.icon-ev {
+  &::before {
+    @extend %icon-ev;
+  }
+}
+
+%icon-facebook {
+  content: "\EA0F";
+}
+.icon-facebook {
+  &::before {
+    @extend %icon-facebook;
+  }
+}
+
+%icon-fax {
+  content: "\EA10";
+}
+.icon-fax {
+  &::before {
+    @extend %icon-fax;
+  }
+}
+
+%icon-filter {
+  content: "\EA11";
+}
+.icon-filter {
+  &::before {
+    @extend %icon-filter;
+  }
+}
+
+%icon-firinci {
+  content: "\EA12";
+}
+.icon-firinci {
+  &::before {
+    @extend %icon-firinci;
+  }
+}
+
+%icon-form {
+  content: "\EA13";
+}
+.icon-form {
+  &::before {
+    @extend %icon-form;
+  }
+}
+
+%icon-instagram {
+  content: "\EA14";
+}
+.icon-instagram {
+  &::before {
+    @extend %icon-instagram;
+  }
+}
+
+%icon-language {
+  content: "\EA15";
+}
+.icon-language {
+  &::before {
+    @extend %icon-language;
+  }
+}
+
+%icon-linkedin {
+  content: "\EA16";
+}
+.icon-linkedin {
+  &::before {
+    @extend %icon-linkedin;
+  }
+}
+
+%icon-list {
+  content: "\EA17";
+}
+.icon-list {
+  &::before {
+    @extend %icon-list;
+  }
+}
+
+%icon-list2 {
+  content: "\EA18";
+}
+.icon-list2 {
+  &::before {
+    @extend %icon-list2;
+  }
+}
+
+%icon-logo-en {
+  content: "\EA19";
+}
+.icon-logo-en {
+  &::before {
+    @extend %icon-logo-en;
+  }
+}
+
+%icon-logo {
+  content: "\EA1A";
+}
+.icon-logo {
+  &::before {
+    @extend %icon-logo;
+  }
+}
+
+%icon-marka {
+  content: "\EA1B";
+}
+.icon-marka {
+  &::before {
+    @extend %icon-marka;
+  }
+}
+
+%icon-more {
+  content: "\EA1C";
+}
+.icon-more {
+  &::before {
+    @extend %icon-more;
+  }
+}
+
+%icon-phone {
+  content: "\EA1D";
+}
+.icon-phone {
+  &::before {
+    @extend %icon-phone;
+  }
+}
+
+%icon-play {
+  content: "\EA1E";
+}
+.icon-play {
+  &::before {
+    @extend %icon-play;
+  }
+}
+
+%icon-plus {
+  content: "\EA1F";
+}
+.icon-plus {
+  &::before {
+    @extend %icon-plus;
+  }
+}
+
+%icon-product {
+  content: "\EA20";
+}
+.icon-product {
+  &::before {
+    @extend %icon-product;
+  }
+}
+
+%icon-right {
+  content: "\EA21";
+}
+.icon-right {
+  &::before {
+    @extend %icon-right;
+  }
+}
+
+%icon-search {
+  content: "\EA22";
+}
+.icon-search {
+  &::before {
+    @extend %icon-search;
+  }
+}
+
+%icon-tariff {
+  content: "\EA23";
+}
+.icon-tariff {
+  &::before {
+    @extend %icon-tariff;
+  }
+}
+
+%icon-twitter {
+  content: "\EA24";
+}
+.icon-twitter {
+  &::before {
+    @extend %icon-twitter;
+  }
+}
+
+%icon-upload {
+  content: "\EA25";
+}
+.icon-upload {
+  &::before {
+    @extend %icon-upload;
+  }
+}
+
+%icon-usta {
+  content: "\EA26";
+}
+.icon-usta {
+  &::before {
+    @extend %icon-usta;
+  }
+}
+
+%icon-youtube {
+  content: "\EA27";
+}
+.icon-youtube {
+  &::before {
+    @extend %icon-youtube;
+  }
+}
+
+%icon-zanaatkar {
+  content: "\EA28";
+}
+.icon-zanaatkar {
+  &::before {
+    @extend %icon-zanaatkar;
+  }
+}
+

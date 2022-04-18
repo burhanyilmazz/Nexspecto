@@ -1,0 +1,30 @@
+$ {
+  let {renderBody, body, foot, title, type, close, ...attrs} = input;
+  const options = input || {};
+  attrs.class = ["m-modal"];
+  options.type = "Modal";
+
+  if ( input.component ) {
+    options.type = input.component;
+  }
+
+  if ( type ) {
+    attrs.class.push(`m-modal--${type}`);
+  }
+}
+
+<div ...attrs data-component=options>
+  <div class="m-modal__title" if(input.title)>
+    <include(input.title.renderBody)/>
+  </div>
+  <div class="m-modal__header" if(input.header)>
+    <include(input.header.renderBody)/>
+  </div>
+  <div class="m-modal__body" if(input.body)>
+    <include(input.body.renderBody)/>
+  </div>
+  <div class="m-modal__foot" if(input.foot)>
+    <include(input.foot.renderBody)/>
+  </div>
+  <ButtonIcon if(!close) attrs={'data-fancybox-close': true} class="btn-close" icon="close">ButtonIcon</ButtonIcon>
+</div>

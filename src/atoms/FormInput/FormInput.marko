@@ -1,0 +1,48 @@
+$ {
+  const options = input || {};
+  const inputOptions = input.inputOptions || {};
+  inputOptions.type = "FormInput";
+
+  const type = input.type || "text";
+  let classes = ["a-input"];
+  let inputClasses = [input.inputClasses] || [];
+  const attrs = input.attrs || {};
+  const _id = input.id;
+  const _required = input.required;
+  const maxlength = input.maxlength;
+  const placeholder = input.placeholder;
+  const value = input.value;
+  const field = input.field || "";
+
+  if ( input.disabled ) {
+    classes.push("a-input--disabled");
+    attrs.disabled = true;
+  }
+
+  if(_required) {
+    attrs.required = true;
+  }
+
+  if(value) {
+    attrs.value = value;
+  }
+
+  if ( input.name ) {
+    attrs.name = input.name;
+  } else {
+    const date = new Date();
+    attrs.name = `input-${date.getTime()}`
+  }
+
+}
+
+<div class=classes data-component=inputOptions>
+  <input if(_id) class=inputClasses type=type id=_id  ...attrs placeholder="${placeholder}" maxlength="${maxlength}" />
+  <input else class=inputClasses type=type id:scoped="input"  ...attrs placeholder="${placeholder}"  maxlength="${maxlength}" />
+  <label if(_id) for=_id>${field}</label>
+  <label else for:scoped="input">${field}</label>
+  <if(_required)>
+    <i>*</i>
+  </if>
+</div>
+

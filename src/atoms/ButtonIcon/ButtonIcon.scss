@@ -1,0 +1,156 @@
+.a-btn-icon {
+  font-size: 0px;
+  line-height: 0 !important;
+  display: inline-block;
+  text-align: center;
+  padding: 2px;
+  background-color: transparent;
+  color: $CodGray2;
+  text-decoration: none;
+  border: 0;
+  line-height: rem(20px);
+  transition: all 0.5s ease;
+
+  i {
+    &::before {
+      font-family: $iconFontName;
+      display: block;
+      font-size: rem(20px);
+    }
+  }
+
+  &:hover {
+    color: $Green;
+    cursor: pointer;
+  }
+
+  &--circle {
+    width: rem(40px);
+    height: rem(40px);
+    border-radius: 100%;
+    background-color: $haze;
+    color: $Matisse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $alice;
+      color: $Matisse;
+    }
+    &:active {
+      background-color: $solitude;
+      color: $Matisse;
+    }
+
+    &.a-btn-icon--disabled {
+      background-color: $haze;
+      color: $Matisse;
+      cursor: default;
+      opacity: 0.4;
+
+      &:hover {
+        background-color: $haze;
+        color: $Matisse;
+        cursor: default;
+        opacity: 0.4;
+      }
+    }
+
+    &--transparent {
+      background-color: transparent;
+      border: 2px solid $white;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $Green;
+      }
+      &:active {
+        background-color: $black-a014;
+        color: $Green;
+      }
+
+      &.a-btn-icon--disabled {
+        background-color: $white-a025;
+        color: $white;
+        cursor: default;
+        opacity: 0.4;
+
+        &:hover {
+          background-color: $white-a025;
+          color: $white;
+          cursor: default;
+          opacity: 0.4;
+        }
+      }
+    }
+
+    &--white {
+      background-color: $white;
+      color: $midnight;
+
+      &:hover {
+        background-color: $solitude;
+        color: $midnight;
+      }
+      &:active {
+        background-color: $white-a06;
+        color: $midnight;
+      }
+    }
+
+    &--yellow {
+      background-color: $tangerine;
+      color: $midnight;
+
+      &:hover {
+        background-color: $candlelight;
+        color: $midnight;
+      }
+      &:active {
+        background-color: $buttercup;
+        color: $midnight;
+      }
+    }
+  }
+
+  &--small {
+    width: rem(24px);
+    height: rem(24px);
+
+    i:before {
+      font-size: rem(18px);
+    }
+  }
+
+  &--medium {
+    width: rem(40px);
+    height: rem(40px);
+  }
+
+  &--medium-b {
+    width: rem(48px);
+    height: rem(48px);
+
+    i:before {
+      font-size: rem(24px);
+    }
+  }
+
+  &--big {
+    width: rem(64px);
+    height: rem(64px);
+
+    i:before {
+      font-size: rem(26px);
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+  }
+}

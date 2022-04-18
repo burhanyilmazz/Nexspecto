@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${data.pkg.name} - Sayfalar</title>
+    <style type="text/css">
+      html, body, .wrapper {
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #30509f;
+        color: #666;
+        font-family: Arial;
+        font-size: 16px;
+        margin: 0;
+        padding: 1.25rem;
+      }
+      header {
+        color: #fff;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        margin: 0 0 5px;
+      }
+      header h2 {
+        font-size: 0.75rem;
+        margin: 0 0 5px;
+      }
+      header h1 sup {
+        font-size: 0.6875rem;
+        font-weight: normal;
+      }
+      header p {
+        font-size: 0.6875rem;
+        font-style: italic;
+        margin: 0 0 1.25rem;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      main > * {
+        margin: 0 10px;
+        max-width: 100%;
+        flex-grow: 1;
+      }
+      main > :first-child {
+        margin-left: 0;
+      }
+      main > :last-child {
+        margin-right: 0;
+      }
+      .pages {
+        background: #fff;
+        border-radius: 0.625rem;
+        overflow: hidden;
+      }
+      .pages h2 {
+        color: #30509f;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+      }
+      .page h3 {
+        background: #e5e5e5;
+        border-bottom: 2px dotted #30509f;
+        color: #444;
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 0.625rem 0.9375rem;
+      }
+      .page ul {
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .page ul li {
+        border-bottom: 1px solid #ddd;
+      }
+      .page ul li a {
+        color: #666;
+        display: block;
+        padding: 0.9375rem;
+        text-decoration: none;
+        position: relative;
+      }
+      .page ul li a:before,
+      .page ul li a:after {
+        border-left: 2px solid #666;
+        content: '';
+        opacity: 0;
+        width: 0;
+        height: 0.625rem;
+        position: absolute;
+        right: 0.9375rem;
+        transition: opacity 50ms ease-out;
+      }
+      .page ul li a:before {
+        top: 0.7rem;
+        transform: rotate(-45deg);
+      }
+      .page ul li a:after {
+        top: 1.05rem;
+        transform: rotate(45deg);
+      }
+      .page ul li a:hover {
+        background: #fafafa;
+        text-decoration: underline;
+      }
+      .page ul li a:hover:before,
+      .page ul li a:hover:after {
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <header>
+    <h1>${data.pkg.name} <sup>version: ${data.pkg.version}</sup></h1>
+    <h2>${data.pkg.description}</h2>
+    <p>Build time: <time datetime="${data.buildTime}">${data.buildTime}</time></p>
+  </header>
+
+  <main>
+    <div class="pages" for(platform, files in data.pages)>
+      <h2>${platform.charAt(0).toUpperCase() + platform.slice(1)}</h2>
+      <div class="page" for(dir, files in files)>
+          <h3>${dir}</h3>
+          <ul>
+            <li for(file in files)><a href="${file.url}" target="_blank">${file.name}</a></li>
+          </ul>
+      </div>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>

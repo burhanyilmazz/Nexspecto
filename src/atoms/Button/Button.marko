@@ -1,0 +1,60 @@
+$ {
+  var type = input.type || "a";
+  var href = input.href || "javascript:;";
+  var secondary = input.secondary && "secondary--" || "";
+  var classes = ["a-btn"];
+  var size = input.size;
+  var _title = input.title;
+  const attrs = input.attrs || {};
+  var _class = input.class;
+  
+
+  if ( input.icon ) {
+    classes.push("a-btn--with-icon", `icon-${input.icon}`);
+
+    if ( input.iconPosition == "start") {
+      classes.push(`a-btn--with-icon--${input.iconPosition}`);
+    }
+  }
+
+  if ( input.tag ) {
+    classes.push("a-btn--tag", `a-btn--tag--${input.tag}`);
+  }
+
+  if ( input.full ) {
+    classes.push("a-btn--full");
+  }
+
+  if ( input.disabled ) {
+    classes.push("a-btn--disabled");
+    if (type == "button") {
+      attrs.disabled = true;
+    }
+  }
+
+  if ( input.secondary ) {
+    classes.push("a-btn--secondary");
+  }
+
+  if ( input.variant ) {
+    classes.push(`a-btn--${input.variant}`);
+  }
+
+  if ( input.size ) {
+    classes.push(`a-btn--${input.size}`);
+  }
+
+  if (type != "button") {
+    attrs.href = href;
+  }
+
+  if(_class) {
+    classes.push(`${_class}`)
+  }
+
+  if( input.submit ) {
+    attrs.type = "submit";
+  }
+}
+
+<${type} class=classes ...attrs><span><include(input.renderBody)/></span></${type}>

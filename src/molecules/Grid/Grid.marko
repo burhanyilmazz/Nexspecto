@@ -1,0 +1,26 @@
+$ {
+  let classes = ["row"];
+  const attrs = {};
+
+  if ( input.class ) {
+    if (input.class == "no-gutters") {
+      classes = ["no-gutters"]
+    } else {
+      classes = classes.concat(input.class);
+    }
+  }
+}
+<div class=classes  ...attrs>
+  <for(col in input.cols)>
+    $ {
+      let classes = ["col"];
+
+      if(col.class){
+        classes = [];
+        classes.push(`${col.class}`);
+      }
+    }
+    <div class=classes><include(col.renderBody)/></div>
+  </for>
+</div>
+

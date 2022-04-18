@@ -1,0 +1,43 @@
+$ {
+  var type = input.type || "a";
+  var circle = input.circle && "circle--" || "";
+  var classes = ["a-btn-icon"];
+  var icon = input.icon || "turkcell-logo";
+  var _title = input.title || "";
+  var attrs = input.attrs || {};
+  var _class = input.class;
+
+  if (type == "a") {
+    attrs.href = input.href || "javascript:;";
+  }
+
+  if ( input.class ) {
+    classes = classes.concat( input.class );
+  }
+
+  if ( input.size ) {
+    classes.push(`a-btn-icon--${input.size}`);
+  }
+
+  if ( input.disabled ) {
+    classes.push("a-btn-icon--disabled");
+  }
+
+  if(input.title) {
+    attrs.title = input.title;
+  }
+
+  if ( input.circle ) {
+    classes.push("a-btn-icon--circle");
+  }
+
+  if ( input.variant ) {
+    classes.push(`a-btn-icon--${circle}${input.variant}`);
+  }
+
+  if(input.role) {
+    attrs.role = input.role;
+  }
+}
+
+<${type} class=classes ...attrs><i class=`icon-${icon}`></i><include(input.renderBody)/></${type}>

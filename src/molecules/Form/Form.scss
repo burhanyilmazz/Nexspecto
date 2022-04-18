@@ -1,0 +1,11 @@
+.m-form {
+  .parsley-errors-list {
+    color: $Monza;
+    font-size: rem(12px);
+    margin-top: rem(5px);
+
+    li {
+      display: flex !important;
+    }
+  }
+}

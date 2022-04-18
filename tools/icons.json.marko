@@ -1,0 +1,1 @@
+<for(glyph in input.glyphs | status-var=loop)><if(loop.isFirst())>{"icons": [</if>"${input.prefix}${glyph.name}"<if(!loop.isLast())>, </if><if(loop.isLast())>]}</if></for>

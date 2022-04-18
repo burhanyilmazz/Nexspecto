@@ -1,0 +1,28 @@
+{
+  "name": "Nexspecto",
+  "description": "Nexspecto Frontend",
+  "main": "index.js",
+  "license": "ISC",
+  "keywords": [
+    "frontend",
+    "master",
+    "component",
+    "based"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "headroom": "^1.0.3",
+    "fancybox": "^3.5.2",
+    "parsleyjs": "^2.8.1",
+    "lazysizes": "^4.1.4"
+  }
+}

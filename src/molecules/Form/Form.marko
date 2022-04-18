@@ -1,0 +1,22 @@
+$ {
+  let classes = ["m-form"];
+  const url = input.url;
+  const action = input.action;
+  var excludeList = "disabled, :hidden";
+  var includeList = input.includeList;
+  const attrs = input.attrs || {};
+  const noParsley = input.noParsley;
+
+  if(includeList) {
+    excludeList = "disabled";
+  }
+
+  if ( input.class ) {
+    classes = classes.concat( input.class );
+  }
+
+}
+
+<form class=classes action=action id=input.id data-url=url data-parsley-validate=(noParsley ? null : "data-parsley-validate") data-parsley-excluded=excludeList data-parsley-inputs=includeList ...attrs>
+  <include(input.renderBody)/>
+</form>

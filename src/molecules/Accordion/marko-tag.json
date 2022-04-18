@@ -1,0 +1,10 @@
+{
+  "@class": "string",
+  "@accordion-options": "object",
+  "@items <AccordionItem>[]": {
+    "@itemClass": "string",
+    "@active": "string",
+    "@head <Head>": {},
+    "@body <Body>": {}
+  }
+}

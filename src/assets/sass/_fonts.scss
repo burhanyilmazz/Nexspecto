@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "IconFont";
+  src: url("../fonts/IconFont.eot");
+  src: url("../fonts/IconFont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/IconFont.woff") format("woff"),
+    url("../fonts/IconFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilmer";
+  src: url("../fonts/gilmer_heavy.eot");
+  src: url("../fonts/gilmer_heavy.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gilmer_heavy.woff2") format("woff2"),
+    url("../fonts/gilmer_heavy.woff") format("woff"),
+    url("../fonts/gilmer_heavy.ttf") format("truetype"),
+    url("../fonts/gilmer_heavy.svg#gilmerbold") format("svg");
+  font-weight: 100; // H etiketlerinde otomatik olarak algılandığı için 100 yapıldı
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilmer";
+  src: url("../fonts/gilmer_bold.eot");
+  src: url("../fonts/gilmer_bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gilmer_bold.woff2") format("woff2"),
+    url("../fonts/gilmer_bold.woff") format("woff"),
+    url("../fonts/gilmer_bold.ttf") format("truetype"),
+    url("../fonts/gilmer_bold.svg#gilmerbold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilmer";
+  src: url("../fonts/gilmer.eot");
+  src: url("../fonts/gilmer.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gilmer.woff2") format("woff2"),
+    url("../fonts/gilmer.woff") format("woff"),
+    url("../fonts/gilmer.ttf") format("truetype"),
+    url("../fonts/gilmer.svg#gilmerregular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilmer";
+  src: url("../fonts/gilmer_light.eot");
+  src: url("../fonts/gilmer_light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gilmer_light.woff2") format("woff2"),
+    url("../fonts/gilmer_light.woff") format("woff"),
+    url("../fonts/gilmer_light.ttf") format("truetype"),
+    url("../fonts/gilmer_light.svg#gilmerlight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,0 +1,121 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+      $deneme: (0px, 0px, 0px, 0px, 64px, 64px, 64px, 64px, '../../images/sprite/sprite.png', 'deneme', );
+      $deneme-2x-name: 'deneme@2x';
+      $deneme-2x-x: 0px;
+      $deneme-2x-y: 0px;
+      $deneme-2x-offset-x: 0px;
+      $deneme-2x-offset-y: 0px;
+      $deneme-2x-width: 128px;
+      $deneme-2x-height: 128px;
+      $deneme-2x-total-width: 128px;
+      $deneme-2x-total-height: 128px;
+      $deneme-2x-image: 'sprite@2x.png';
+      $deneme-2x: (0px, 0px, 0px, 0px, 128px, 128px, 128px, 128px, '../../images/sprite/sprite@2x.png', 'deneme@2x', );
+    $spritesheet-sprites: ($deneme, );
+    $spritesheet: (64px, 64px, 'sprite.png', $spritesheet-sprites, );
+    $retina-spritesheet-width: 128px;
+    $retina-spritesheet-height: 128px;
+    $retina-spritesheet-image: 'sprite@2x.png';
+    $retina-spritesheet-sprites: ($deneme-2x, );
+    $retina-spritesheet: (128px, 128px, 'sprite@2x.png', $retina-spritesheet-sprites, );
+
+        $deneme-group-name: 'deneme';
+        $deneme-group: ('deneme', $deneme, $deneme-2x, );
+    $retina-groups: ($deneme-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+      @mixin sprite-background-size($sprite) {
+        $sprite-total-width: nth($sprite, 7);
+        $sprite-total-height: nth($sprite, 8);
+        background-size: $sprite-total-width $sprite-total-height;
+      }
+
+      @mixin retina-sprite($retina-group) {
+        $normal-sprite: nth($retina-group, 2);
+        $retina-sprite: nth($retina-group, 3);
+        @include sprite($normal-sprite);
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @include sprite-image($retina-sprite);
+          @include sprite-background-size($normal-sprite);
+        }
+      }
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+      @mixin retina-sprites($retina-groups) {
+        @each $retina-group in $retina-groups {
+          $sprite-name: nth($retina-group, 1);
+          .#{$sprite-name} {
+            @include retina-sprite($retina-group);
+          }
+        }
+      }

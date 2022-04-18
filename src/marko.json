@@ -1,0 +1,3 @@
+{
+  "tags-dir": ["./atoms/", "./molecules/", "./organisms/", "./pages/", "./templates/"]
+}

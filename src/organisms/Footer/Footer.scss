@@ -1,0 +1,48 @@
+.o-footer {
+  background: $Alabaster;
+  position: relative;
+  z-index: 2;
+  content-visibility: auto;
+  
+  &__top {
+    padding: rem(54px) rem(57px);
+
+    @media screen and (max-width: 990px) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    padding: rem(50px) rem(57px);
+    border-top: 1px solid rgba($color: $Tuna, $alpha: .2);
+    position: relative;
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+    
+    @media screen and (max-width: 768px) {
+      border: 0;
+      padding: rem(50px) rem(35px) rem(17px);
+    }
+    
+    .row {
+      align-items: center;
+    }
+  }
+
+  .fikirmod {
+    transform: rotate(90deg);
+    float: right;
+
+    @media screen and (max-width: 1200px) {
+      float: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      transform: rotate(0deg);
+      position: absolute;
+      right: rem(35px);
+      bottom: rem(50px);
+    }
+  }
+}

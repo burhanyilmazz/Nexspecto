@@ -1,0 +1,19 @@
+.m-logo {
+  display: flex;
+
+  i {
+    color: $Green;
+
+    &:before {
+      font-size: rem(93px);
+
+      @media screen and (max-width: 1280px) {
+        font-size: rem(85px);
+      }
+
+      @media screen and (max-width: 1024px) {
+        font-size: rem(50px);
+      }
+    }
+  }
+}

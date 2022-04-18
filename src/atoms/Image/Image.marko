@@ -1,0 +1,18 @@
+$ {
+  const {renderBody, ...attrs} = input;
+  const classes = ["lazyload"]
+  const datas = input.datas || {};
+
+  if ( input.src == undefined ) {
+    throw new Error('Image src özelliği zorunludur.');
+  } else {
+    attrs["data-src"] = input.src;
+    delete attrs.src;
+  }
+
+  if(attrs["class"]) {
+    classes.push(attrs["class"])
+  }
+
+}
+<img src="../../assets/images/spacer.gif"  alt="" ...attrs class=classes ...datas />

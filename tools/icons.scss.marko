@@ -1,0 +1,10 @@
+<for(glyph in input.glyphs)>
+%${input.prefix}${glyph.name} {
+  content: "\\${glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase()}";
+}
+.${input.prefix}${glyph.name} {
+  &::before {
+    @extend %${input.prefix}${glyph.name};
+  }
+}
+</for>

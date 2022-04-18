@@ -1,0 +1,351 @@
+.m-modal {
+  position: relative;
+  max-width: rem(580px);
+  background: $white;
+  color: $midnight;
+  box-shadow: 0 2px rem(10px) -4px $midnight;
+  padding: rem(80px);
+  z-index: z-index(modal);
+  display: none;
+  max-height: 100%;
+
+  @media screen and (max-width: 640px) {
+    padding: rem(40px);
+  }
+
+  .btn-close {
+    position: absolute;
+    top: rem(21px);
+    right: rem(19px);
+    color: $midnight;
+    z-index: 99;
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: rem(20px);
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    font-size: rem(14px);
+    color: $Gray;
+    line-height: 150%;
+
+    .m-modal--video & {
+      width: 100%;
+    }
+  }
+
+  &__foot {
+    margin-top: rem(20px);
+
+    .m-modal--video & {
+      margin-top: 0;
+      height: rem(88px);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 11;
+
+      &:after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $alice;
+      }
+
+      .a-btn {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__video {
+    width: 100%;
+  }
+
+  &__video-caps {
+    color: $midnight;
+    display: flex;
+    height: rem(32px);
+    align-items: center;
+
+    h3 {
+      font-size: rem(14px);
+      font-weight: bold;
+      padding: 0 rem(16px) 0 rem(24px);
+      max-width: rem(530px);
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: rem(14px);
+      font-weight: 500;
+      padding: 0 rem(24px) 0 rem(16px);
+    }
+
+    h3 + p {
+      border-left: 1px solid $midnight-a01;
+    }
+  }
+
+  &--video {
+    max-width: rem(980px);
+    padding: 0;
+    overflow: initial;
+    background: $white;
+    width: calc(100% - 40px);
+
+    .fancybox-close-small {
+      width: rem(50px);
+      height: rem(50px);
+      top: rem(-35px);
+      right: rem(-35px);
+
+      svg {
+        display: none;
+      }
+
+      &:after {
+        @extend %icon-close;
+        font-family: $iconFontName;
+        color: $white;
+        font-size: rem(24px);
+        position: relative;
+        text-shadow: 0px 0 3px black;
+      }
+    }
+
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100% !important;
+      width: 100%;
+    }
+
+    .m-modal__body {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      height: 0;
+      padding-top: calc(9 / 16 * 100%);
+    }
+  }
+
+  &--alert {
+    text-align: center;
+
+    i {
+      &:before {
+        font-size: rem(96px);
+      }
+    }
+
+    h4 {
+      //color: $fruitsalad;
+      margin: rem(20px) 0 0;
+      font-size: rem(40px);
+      line-height: rem(47px);
+    }
+
+    p {
+      color: $Tundora;
+      margin-top: rem(10px);
+      font-size: rem(21px);
+      line-height: rem(25px);
+    }
+  }
+
+  &--success {
+    width: 80%;
+    max-width: rem(800px);
+
+    i {
+      color: $Emerald;
+
+      &.icon-close {
+        display: none;
+      }
+    }
+
+    .a-icon--modal {
+      @media screen and (max-width: 640px) {
+        width: rem(52px);
+      }
+    }
+
+    h4 {
+      color: $Green;
+      letter-spacing: -1.2px;
+      font-size: rem(48px);
+      line-height: rem(58px);
+      margin-top: rem(74px);
+      font-weight: 600;
+
+      @media screen and (max-width: 640px) {
+        font-size: rem(22px);
+        line-height: rem(32px);
+        margin-top: rem(40px);
+      }
+
+      span {
+        display: block;
+        color: $black;
+      }
+    }
+
+    p {
+      letter-spacing: -0.5px;
+      color: #606060;
+      font-size: rem(20px);
+      line-height: rem(28px);
+      margin-top: rem(26px);
+
+      @media screen and (max-width: 640px) {
+        font-size: rem(16px);
+        line-height: rem(24px);
+        margin-top: rem(20px);
+      }
+    }
+  }
+
+  &--error {
+    width: 80%;
+    max-width: rem(800px);
+
+    i {
+      color: $Red;
+
+      &.icon-close {
+        display: none;
+      }
+    }
+
+    .a-icon--modal {
+      @media screen and (max-width: 640px) {
+        width: rem(52px);
+      }
+    }
+
+    h4 {
+      color: $Red;
+      letter-spacing: -1.2px;
+      font-size: rem(48px);
+      line-height: rem(58px);
+      margin-top: rem(74px);
+      font-weight: 600;
+      @media screen and (max-width: 640px) {
+        font-size: rem(22px);
+        line-height: rem(32px);
+        margin-top: rem(40px);
+      }
+
+      span {
+        display: block;
+        color: $black;
+      }
+    }
+
+    p {
+      letter-spacing: -0.5px;
+      color: #606060;
+      font-size: rem(20px);
+      line-height: rem(28px);
+      margin-top: rem(26px);
+
+      @media screen and (max-width: 640px) {
+        font-size: rem(16px);
+        line-height: rem(24px);
+        margin-top: rem(20px);
+      }
+    }
+  }
+
+  &--warning {
+    width: rem(380px);
+    text-align: center;
+
+    i {
+      color: $sanmarino;
+
+      &.icon-close {
+        display: none;
+      }
+    }
+
+    h4 {
+      color: $sanmarino;
+    }
+  }
+
+  &--info {
+    width: rem(380px);
+    text-align: center;
+
+    i {
+      color: $buttercup;
+
+      &.icon-close {
+        display: none;
+      }
+    }
+
+    h4 {
+      color: $buttercup;
+    }
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $black-a05;
+  z-index: 900;
+}
+
+.fancybox-slide--current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fancybox-slide--video {
+  .fancybox-content {
+    overflow: hidden;
+    border-radius: 10px;
+    background: none;
+    overflow-x: hidden;
+  }
+}
+
+.fancybox-support,
+.fancybox-comment,
+.fancybox-delivery-from-store {
+  .fancybox-slide--html {
+    padding: 0 !important;
+  }
+}
+
+.fancybox-close-small {
+  top: rem(-29px) !important;
+  right: rem(-29px) !important;
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+  width: rem(60px);
+  height: rem(60px);
+  background: $Green;
+  opacity: 1 !important;
+  border-radius: 100%;
+}

@@ -1,0 +1,6 @@
+{
+  "@class": "string",
+  "@cols <GridCol>[]": {
+    "@class": "string"
+  }
+}

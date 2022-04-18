@@ -1,0 +1,34 @@
+$ {
+  var classes = ["m-accordion"];
+
+  const options = input || {};
+  const accordionOptions = input.accordionOptions || {};
+  accordionOptions.type = "Accordion";
+
+  if ( input.class ) {
+    classes = classes.concat( input.class );
+  }
+}
+
+<div class=classes data-component=accordionOptions>
+  <for(item in input.items)>
+    $ {
+      var headClasses = ["m-accordion__head"];
+      var containerClasses = ["m-accordion__container"];
+      if(item.active) {
+        headClasses.push("m-accordion__head--active")
+      }
+      if ( item.itemClass ) {
+        containerClasses = containerClasses.concat( item.itemClass );
+      }
+    }
+    <div class=containerClasses>
+      <div class=headClasses>
+        <span><include(item.head)/></span>
+      </div>
+      <div class="m-accordion__body">
+        <include(item.body)/>
+      </div>
+    </div>
+  </for>
+</div>

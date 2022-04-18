@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19">
+  <g id="download_1_" data-name="download (1)" transform="translate(0 -5)">
+    <g id="Group_172" data-name="Group 172" transform="translate(6 5)">
+      <g id="Group_171" data-name="Group 171">
+        <path id="Path_11993" data-name="Path 11993" d="M176.595,8.665a.751.751,0,0,0-.671-.415h-1.5V.75a.75.75,0,0,0-1.5,0v7.5h-1.5a.75.75,0,0,0-.6,1.2l2.25,3c.01.013.025.017.035.029a.733.733,0,0,0,.173.145.774.774,0,0,0,.077.052.7.7,0,0,0,.629,0,.759.759,0,0,0,.077-.052.732.732,0,0,0,.173-.145c.01-.012.025-.016.035-.029l2.25-3A.749.749,0,0,0,176.595,8.665Z" transform="translate(-170.674)"/>
+      </g>
+    </g>
+    <g id="Group_174" data-name="Group 174" transform="translate(0 17.25)">
+      <g id="Group_173" data-name="Group 173">
+        <path id="Path_11994" data-name="Path 11994" d="M17.25,320a.75.75,0,0,0-.75.75V323a2.253,2.253,0,0,1-2.25,2.25H3.75A2.253,2.253,0,0,1,1.5,323v-2.25a.75.75,0,0,0-1.5,0V323a3.754,3.754,0,0,0,3.75,3.75h10.5A3.754,3.754,0,0,0,18,323v-2.25A.75.75,0,0,0,17.25,320Z" transform="translate(0 -320)"/>
+      </g>
+    </g>
+  </g>
+</svg>

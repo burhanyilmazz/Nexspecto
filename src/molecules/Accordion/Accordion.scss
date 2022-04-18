@@ -1,0 +1,91 @@
+.m-accordion {
+  position: relative;
+
+  &__container {
+    overflow: hidden;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &__body {
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    color: rgba($color: $Tundora, $alpha: 0.8);
+    font-weight: 400;
+    font-size: rem(18px);
+    line-height: 150%;
+
+    @media screen and (max-width: 990px) {
+      font-size: rem(15px);
+    }
+
+    p {
+      margin-bottom: rem(30px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__head {
+    cursor: pointer;
+    padding: rem(30px) 0;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 500;
+    font-size: rem(26px);
+    line-height: rem(32px);
+    color: $Tuna;
+    margin: 0;
+    transition: all 0.5s ease;
+    padding-right: rem(30px);
+
+    @media screen and (max-width: 990px) {
+      font-size: rem(18px);
+      line-height: rem(22px);
+      padding: rem(20px) 0;
+      padding-right: rem(30px);
+    }
+
+    i {
+      opacity: 0.5;
+      &:before {
+        font-size: rem(16px);
+      }
+    }
+
+    &:after {
+      content: "+";
+      position: absolute;
+      right: 0;
+    }
+
+    &--active {
+      color: $Sage;
+      i {
+        transform: rotate(-90deg);
+      }
+
+      &:after {
+        content: "-";
+      }
+
+      & + .m-accordion__body {
+        height: auto;
+        opacity: 1;
+        display: block;
+        padding: rem(30px) 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        color: $Tuna;
+      }
+    }
+
+    &:hover {
+      color: $Sage;
+    }
+  }
+}

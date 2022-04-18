@@ -1,0 +1,6 @@
+<picture>
+    <source media="(max-width: 768px)" srcset=input.mobile>
+    <source media="(min-width: 769px)" srcset=input.desktop>
+    <img loading="lazy" class="swiper-lazy" if(input.swiper) data-src=input.desktop alt="">
+    <Image src=input.desktop else />
+</picture>

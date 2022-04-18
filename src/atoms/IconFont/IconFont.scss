@@ -1,0 +1,11 @@
+.a-icon {
+
+  &--modal {
+    display: block;
+    margin-bottom: rem(10px);
+
+    &:before {
+      font-size: rem(80px);
+    }
+  }
+}
