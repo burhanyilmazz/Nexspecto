@@ -8,7 +8,8 @@ export default class Timeline {
         right: ".m-timeline__control--right"
       },
       timelineBox: ".m-timeline__content li",
-      card: ".m-card-timeline"
+      card: ".m-card-timeline",
+      progressbar: ".m-timeline-progress__bar"
     };
 
     this.options = $.extend({}, defaults, options);
@@ -17,47 +18,49 @@ export default class Timeline {
     this.$card = this.$el.find(this.options.card);
     this.$leftButton = this.$el.find(this.options.buttons.left);
     this.$rightButton = this.$el.find(this.options.buttons.right);
+    this.$progressbar = this.$el.find(this.options.progressbar);
 
     this.elWidth = this.$el[0].scrollWidth;
-    this.timelineSize = 268;
+    this.cardSize = 268;
 
-    setTimeout(() => this.onInit());
+    setTimeout(() => this.onInit(), 100);
 
 
     this.$el
       .on("click", this.options.buttons.right, event => this.onClickRight(event))
       .on("click", this.options.buttons.left, event => this.onClickLeft(event))
-      .on("scroll", event => this.scrollCheck())
+      .on("scroll", () => this.scrollCheck())
   }
 
   onInit() {
     this.cardSize = this.$card.innerWidth();
-    this.timelineSize = this.$timelineBox.innerWidth();
+
+    this.$progressbar.width(this.$el[0].scrollWidth - 182)
   }
 
   onClickRight(event) {
     event.preventDefault();
     const leftPos = this.$el.scrollLeft();
-    this.timelineSize = this.$timelineBox.innerWidth();
+    this.cardSize = this.$card.innerWidth();
 
     this.$el.animate({
-      scrollLeft: leftPos + this.timelineSize
+      scrollLeft: leftPos + this.cardSize
     }, 400, () => this.scrollCheck());
   }
 
   onClickLeft(event) {
     event.preventDefault();
     const leftPos = this.$el.scrollLeft();
-    this.timelineSize = this.$timelineBox.innerWidth();
+    this.cardSize = this.$card.innerWidth();
 
     this.$el.animate({
-      scrollLeft: leftPos - this.timelineSize
+      scrollLeft: leftPos - this.cardSize
     }, 400, () => this.scrollCheck());
   }
 
   scrollCheck() {
     const leftPos = this.$el.scrollLeft();
-    this.timelineSize = this.$timelineBox.innerWidth();
+    this.cardSize = this.$card.innerWidth();
     
     if (leftPos == 0) {
         this.$leftButton.addClass("disabled");
