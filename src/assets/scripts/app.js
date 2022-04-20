@@ -4,9 +4,12 @@ import LazyLoad         from  '../../../src/assets/scripts/LazyLoad';
 import FormInput        from  '../../../src/atoms/FormInput/FormInput';
 import FormTextarea     from  '../../../src/atoms/FormTextarea/FormTextarea';
 import Hamburger        from  '../../../src/atoms/Hamburger/Hamburger';
+import ScrollDown       from  '../../../src/atoms/ScrollDown/ScrollDown';
 
 import Accordion        from  '../../../src/molecules/Accordion/Accordion';
 import Modal            from  '../../../src/molecules/Modal/Modal';
+import TabDefault       from '../../../src/molecules/TabDefault/TabDefault';
+import Timeline         from  '../../../src/molecules/Timeline/Timeline';
 
 import Header           from  '../../../src/organisms/Header/Header';
 
@@ -16,9 +19,12 @@ const Components = {
   FormInput,
   FormTextarea,
   Hamburger,
+  ScrollDown,
 
   Accordion,
   Modal,
+  TabDefault,
+  Timeline,
   
   Header,
 };

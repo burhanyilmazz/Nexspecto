@@ -1,0 +1,23 @@
+{
+  "@class": "string",
+  "@count": "bool",
+  "@icon": "bool",
+  "@image": "bool",
+  "@container": "bool",
+  "@infinite": "bool",
+  "@centered": "bool",
+  "@theme": "string",
+  "@filtered": "bool",
+  "@tab-options": "object",
+  "@slider-options": "object",
+  "@tabs <TabItem>[]": {
+    "@count": "number",
+    "@countTitle": "number",
+    "@icon": "string",
+    "@label": "string",
+    "@href": "string",
+    "@img": "string",
+    "@dataId": "string",
+    "@coord": "string"
+  }
+}

@@ -1,0 +1,202 @@
+.m-timeline {
+  overflow-x: auto;
+  padding-left: 136px;
+  padding-top: 80px;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 136px);
+    font-size: rem(16px);
+    font-weight: 500;
+    color: #fff;
+    left: 0;
+    position: sticky;
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin: 0 16px;
+
+      .m-ring {
+        background-image: linear-gradient(to right, #92c5eb, #8b9916);
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        padding: 2px;
+        margin-right: 32px;
+        span {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #0b0b45;
+          position: relative;
+          z-index: 2;
+
+          i {
+            &:before {
+              font-size: rem(16px);
+            }
+          }
+        }
+
+        &:after {
+          content: "";
+          width: 16px;
+          height: 2px;
+          background-color: #fff;
+          z-index: 3;
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+
+      &:first-child {
+        .m-ring {
+          margin-right: 0;
+          margin-left: 32px;
+        }
+        span {
+          i {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__progress {
+    position: relative;
+    margin-top: 160px;
+
+    ul {
+      display: flex;
+      font-size: 16px;
+      position: absolute;
+      top: -35px;
+      z-index: 2;
+
+      li {
+        width: 268px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #8585a2;
+        margin-right: 32px;
+
+        span {
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #8585a2;
+          margin-top: 12px;
+        }
+
+        &.completed {
+          span {
+            background-color: #fff;
+            &::before {
+              font-family: $iconFontName;
+              @extend %icon-check;
+              font-size: rem(10px);
+              color: #8b9916;
+            }
+          }
+        }
+
+        &.active {
+          color: #fff;
+          span {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &-progress {
+    &__bar {
+      height: 16px;
+      padding: 4px;
+      border: solid 2px #8585a2;
+      position: relative;
+      z-index: 1;
+      min-width: 100%;
+
+      span {
+        height: 4px;
+        background-image: linear-gradient(to right, #92c5eb, #8b9916);
+        display: flex;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 21px;
+    ol {
+      display: flex;
+      > li {
+        margin-right: 32px;
+
+        h6 {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: normal;
+          text-align: center;
+          color: #8585a2;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          &:after {
+            content: "";
+            width: 2px;
+            height: 12px;
+            background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+            margin-top: 12px;
+          }
+        }
+
+        &.active {
+          h6 {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+$ {
+    const teams = [
+        {
+            "name": "YILMAZ ÇİFTÇİ",
+            "title": "co-founder & chief operating",
+            "src": "../../assets/images/content/team/avatar-01.png"
+        },
+        {
+            "name": "ABDULLAH ARSLAN",
+            "title": "co-founder & chief operating",
+            "src": "../../assets/images/content/team/avatar-02.png"
+        },
+        {
+            "name": "İBRAHİM DEMİR",
+            "title": "chief technology officer",
+            "src": "../../assets/images/content/team/avatar-03.png"
+        },
+        {
+            "name": "BATURAY KOCATEPE",
+            "title": "ui-ux designer",
+            "src": "../../assets/images/content/team/avatar-04.png"
+        },
+        {
+            "name": "MEHMET EMİN ÖZTÜRK",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/team/avatar-05.png"
+        },
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/team/avatar-06.png"
+        },
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/team/avatar-07.png"
+        }
+    ];
+    
+const advisors = [
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/advisor/advisor-01.png"
+        },
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/advisor/advisor-02.png"
+        },
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/advisor/advisor-03.png"
+        },
+        {
+            "name": "NAME SURNAME",
+            "title": "tittle lorem ipsun dolor",
+            "src": "../../assets/images/content/advisor/advisor-04.png"
+        }
+    ]; 
+}
+<div class="o-team">
+    <div class="container-fluid">
+        <h3>team</h3>
+        <h2>THE LEADERSHIP TEAM</h2>
+        <p>Meet the them</p>
+
+        <div class="o-team__list">
+            <for(team in teams)>
+                <CardUser src=team.src title=team.title name=team.name />
+            </for>
+        </div>
+
+        <h2>ADVISORS</h2>
+        <p>Meet the them</p>
+
+        <div class="o-team__list">
+            <for(advisor in advisors)>
+                <CardUser src=advisor.src title=advisor.title name=advisor.name />
+            </for>
+        </div>
+    </div>
+</div>

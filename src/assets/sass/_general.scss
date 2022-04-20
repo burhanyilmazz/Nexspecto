@@ -50,7 +50,7 @@ pre {
   white-space: break-spaces;
   color: inherit;
 }
-
+/* 
 .inline-block {
   display: inline-block;
 }
@@ -62,7 +62,7 @@ pre {
 .wrapper {
   padding-left: rem(150px);
 }
-
+ */
 .disable-scroll {
   @media screen and (max-width: 990px) {
     position: fixed;
@@ -84,7 +84,7 @@ input::-webkit-input-placeholder {
   box-shadow: none;
 }
 
-.clearfix:after {
+/* .clearfix:after {
   clear: both;
 }
 .clearfix {
@@ -99,7 +99,7 @@ input::-webkit-input-placeholder {
 }
 .text-left {
   text-align: left !important;
-}
+} */
 a {
   text-decoration: none;
 }
@@ -113,7 +113,7 @@ figure {
   display: inline-flex;
 }
 
-.d-flex {
+/* .d-flex {
   display: flex;
 }
 
@@ -225,7 +225,7 @@ figure {
 .align-self-stretch {
   -ms-flex-item-align: stretch !important;
   align-self: stretch !important;
-}
+} */
 
 .mobile-visible {
   display: none !important;

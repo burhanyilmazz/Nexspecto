@@ -37,9 +37,9 @@ $ {
 }
 
 <div class=classes data-component=inputOptions>
-  <textarea if(_id) class=inputClasses type=type id=_id  ...attrs placeholder="${placeholder}" maxlength="${maxlength}"></textarea>
-  <textarea else class=inputClasses type=type id:scoped="input"  ...attrs placeholder="${placeholder}"  maxlength="${maxlength}"></textarea>
   <label if(_id) for=_id>${field}</label>
   <label else for:scoped="input">${field}</label>
+  <textarea if(_id) class=inputClasses type=type id=_id  ...attrs placeholder="${placeholder}" maxlength="${maxlength}"></textarea>
+  <textarea else class=inputClasses type=type id:scoped="input"  ...attrs placeholder="${placeholder}"  maxlength="${maxlength}"></textarea>
 </div>
 

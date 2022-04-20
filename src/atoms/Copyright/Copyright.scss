@@ -1,0 +1,22 @@
+.a-copyright {
+  font-size: 16px;
+  color: #0b0b45;
+  width: 100%;
+  position: relative;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #92c5eb, #8b9916);
+    opacity: .4;
+  }
+}

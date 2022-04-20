@@ -1,0 +1,119 @@
+.o-contact {
+  position: relative;
+  padding-bottom: 80px;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #92c5eb, #8b9916);
+    opacity: 0.4;
+  }
+
+  h3 {
+    font-size: rem(21px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: rem(5px);
+    text-align: center;
+    color: #92c5eb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:before {
+      content: "";
+      width: 2px;
+      height: 64px;
+      background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+    }
+  }
+
+  h2 {
+    font-size: rem(32px);
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #fff;
+    margin-top: 12px;
+  }
+
+  p {
+    font-size: rem(16px);
+    text-align: center;
+    color: #8585a2;
+		margin-top: 12px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(21px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+		margin-top: 80px;
+
+    li {
+      margin-right: 32px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        span {
+          display: inline-flex;
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          align-items: center;
+          justify-content: center;
+          background-image: linear-gradient(to right, #92c5eb, #8b9916);
+          margin-right: 16px;
+          i {
+            color: #fff;
+            font-size: rem(24px);
+          }
+        }
+      }
+    }
+  }
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 80px;
+
+		img {
+			width: 100%;
+			max-width: 543px;
+		}
+
+		.m-form-group {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 32px;
+			.a-input {
+				width: calc(50% - 16px);
+			}
+		}
+
+		.m-form {
+			width: calc(100% - 600px);
+		}
+
+		.a-btn {
+			width: 100%;
+			margin-top: 32px;
+		}
+	}
+}

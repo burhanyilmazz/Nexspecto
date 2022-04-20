@@ -1,0 +1,30 @@
+$ {
+  const options = input || {};
+  const tabOptions = input.tabOptions || {};
+  tabOptions.type = "TabDefault";
+
+  let classes = ["m-tab-default"];
+  const paneClasses = ["m-tab-default__pane"];
+  const itemClasses = ["m-tab-default__items"];
+
+  if ( input.icon ) {
+    classes.push("m-tab--icon");
+  }
+}
+
+<div class=classes data-component=tabOptions>
+  <div class=itemClasses role="tablist">
+    <div class="m-tab-default__items--desc" for(tabIndex, tab in input.tabs) >
+      <div>
+        <a href="${tab.href}" role="tab">
+          <if(!tab.img)>${tab.label}</if>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="m-tab-default__panes">
+    <div for(tabIndex, tab in input.tabs) class=paneClasses role="tabpanel">
+      <include(tab.renderBody)/>
+    </div>
+  </div>
+</div>

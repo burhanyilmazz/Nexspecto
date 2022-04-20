@@ -37,12 +37,9 @@ $ {
 }
 
 <div class=classes data-component=inputOptions>
-  <input if(_id) class=inputClasses type=type id=_id  ...attrs placeholder="${placeholder}" maxlength="${maxlength}" />
-  <input else class=inputClasses type=type id:scoped="input"  ...attrs placeholder="${placeholder}"  maxlength="${maxlength}" />
   <label if(_id) for=_id>${field}</label>
   <label else for:scoped="input">${field}</label>
-  <if(_required)>
-    <i>*</i>
-  </if>
+  <input if(_id) class=inputClasses type=type id=_id  ...attrs placeholder="${placeholder}" maxlength="${maxlength}" />
+  <input else class=inputClasses type=type id:scoped="input"  ...attrs placeholder="${placeholder}"  maxlength="${maxlength}" />
 </div>
 

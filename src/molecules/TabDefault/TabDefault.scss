@@ -1,0 +1,131 @@
+.m-tab-default {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+
+    &--desc {
+      position: relative;
+      font-size: rem(16px);
+      margin: 0 16px;
+
+      > div {
+        width: 100%;
+        clip-path: polygon(
+          0 0,
+          calc(100% - 13px) 0,
+          100% 10px,
+          100% 100%,
+          10px 100%,
+          0 calc(100% - 10px)
+        );
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #8585a2;
+        padding: 2px;
+        position: relative;
+      }
+
+      &.m-tab-default__item--active {
+        > div {
+          background-image: linear-gradient(to left, #8b9916, #92c5eb);
+        }
+        a {
+          color: #fff;
+        }
+
+        &:before {
+          border-top-color: #8b9916;
+        }
+
+        &:after {
+          border-bottom-color: #92c5eb;
+        }
+      }
+
+      a {
+        background: #0b0b45;
+        box-sizing: border-box;
+        clip-path: polygon(
+          0 0,
+          calc(100% - 13px) 0,
+          100% 10px,
+          100% 100%,
+          10px 100%,
+          0 calc(100% - 10px)
+        );
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        color: #8585a2;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 8px solid #8585a2;
+        border-left: 8px solid transparent;
+        width: 0;
+        z-index: 2;
+        transition: all 0.5s ease;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 8px solid #8585a2;
+        border-right: 8px solid transparent;
+        width: 0;
+        z-index: 2;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  &__panes {
+    width: 100%;
+
+    .m-tab-default__pane {
+      opacity: 0;
+      transition: 400ms ease-in-out;
+      transition-property: opacity;
+      will-change: opacity;
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      top: -9999px;
+      display: none;
+
+      &.m-tab-default__pane--active {
+        opacity: 1;
+        position: static;
+        z-index: initial;
+        pointer-events: initial;
+        display: block;
+      }
+
+      &.m-tab-default__pane--inactive {
+        transition: none;
+        display: none;
+      }
+    }
+  }
+}
