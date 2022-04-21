@@ -1,0 +1,8 @@
+Header set X-UA-Compatible "IE=edge"
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^build$ download.php
+
+RewriteRule ^$ web [L]

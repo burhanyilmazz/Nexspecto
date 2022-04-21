@@ -42,12 +42,10 @@ config.vendors = {};
 config.vendors.js = [
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/fancybox/dist/jquery.fancybox.min.js',
-  'bower_components/headroom/dist/headroom.js',
   'bower_components/parsleyjs/dist/parsley.min.js',
   'bower_components/parsleyjs/dist/i18n/tr.js',
   'bower_components/lazysizes/lazysizes.min.js',
   'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
-  'bower_components/fullpage.js/vendors/easings.min.js',
   'bower_components/fullpage.js/dist/fullpage.js',
   'src/assets/scripts/vendors/chart.min.js',
 ];
