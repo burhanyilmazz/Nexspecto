@@ -1,0 +1,53 @@
+.a-token-box {
+  position: relative;
+  margin-top: 16px;
+  width: 100%;
+  margin-top: 32px;
+
+  &__content {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 28px) 0,
+      100% calc(100% - 50px),
+      100% 100%,
+      30px 100%,
+      0 calc(100% - 28px)
+    );
+    height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(266deg, #a8b351, #8b9916);
+    padding: 2px 100px;
+    font-size: rem(21px);
+    font-weight: normal;
+
+    b {
+      font-size: rem(21px);
+      font-weight: 500;
+      margin-right: 5px;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 16px solid #8b9916;
+    border-left: 16px solid transparent;
+    width: 0;
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 16px solid #8b9916;
+    border-right: 16px solid transparent;
+    width: 0;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,136 @@
+.o-about {
+  position: relative;
+  padding: 80px 0;
+
+  h3 {
+    font-size: rem(21px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5px;
+    color: #92c5eb;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      width: 68px;
+      height: 2px;
+      background-image: linear-gradient(to right, #92c5eb, #8b9916);
+      margin-right: 32px;
+    }
+  }
+
+  h2 {
+    font-size: rem(32px);
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      max-width: 100%;
+    }
+
+    h2 {
+      margin-top: 24px;
+    }
+
+    p {
+      font-size: rem(16px);
+      font-weight: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      color: #fff;
+      margin-top: 24px;
+    }
+  }
+
+  &-text {
+    &__col {
+      width: 50%;
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  &__lists {
+    margin-top: 34px;
+    ul {
+      margin-top: 80px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+        position: relative;
+
+        h2 {
+          width: 50%;
+        }
+
+        p {
+          color: #8585a2;
+          width: 50%;
+          font-size: rem(16px);
+          font-weight: normal;
+          line-height: 1.75;
+          letter-spacing: normal;
+        }
+
+        &:before {
+          content: "";
+          height: 2px;
+          width: 100%;
+          opacity: 0.4;
+          background-image: linear-gradient(to right, #92c5eb, #8b9916);
+          position: absolute;
+          top: 0;
+        }
+
+        &:last-child {
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            opacity: 0.4;
+            background-image: linear-gradient(to right, #92c5eb, #8b9916);
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 80px;
+  }
+
+  &-cards {
+    &__list {
+      margin-top: 80px;
+      display: flex;
+			justify-content: space-between;
+
+			.m-card-about {
+				width: calc(33% - 16px);
+				margin: 16px;
+
+				&:first-child {
+					margin-top: 40px;
+				}
+
+				&:last-child {
+					margin-top: 80px;
+				}
+			}
+    }
+  }
+}

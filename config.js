@@ -48,6 +48,7 @@ config.vendors.js = [
   'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
   'bower_components/fullpage.js/vendors/easings.min.js',
   'bower_components/fullpage.js/dist/fullpage.js',
+  'src/assets/scripts/vendors/chart.min.js',
 ];
 config.vendors.css = [
   'bower_components/fancybox/dist/jquery.fancybox.min.css',

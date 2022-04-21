@@ -1,0 +1,86 @@
+$ {
+    const items = [
+        {
+            title: "Team",
+            text: "2 year locked",
+            percent: 8
+        },
+        {
+            title: "Advisor",
+            text: "1 year locked",
+            percent: 5
+        },
+        {
+            title: "Partners",
+            text: "2 year locked",
+            percent: 8
+        },
+        {
+            title: "Bounty",
+            text: "in the process",
+            percent: 2
+        },
+        {
+            title: "Bes",
+            text: "in the process",
+            percent: 44
+        },
+        {
+            title: "Reserves",
+            text: "for liquidity",
+            percent: 4
+        },
+        {
+            title: "Foundation",
+            text: "2 year locked",
+            percent: 9
+        },
+        {
+            title: "Pre-Sale",
+            text: "Tokens will be unlocked at linear rates in 12 months",
+            percent: 5
+        },
+        {
+            title: "Private Sale",
+            text: "Tokens will be unlocked at linear rates in 12 months",
+            percent: 7.5
+        },
+        {
+            title: "Public Sale",
+            text: "Tokens will be unlocked at linear rates in 12 months",
+            percent: 7.5
+        },
+    ];
+}
+
+<div class="m-chart">
+    <div class="m-chart__chart">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="m-chart__boxes">
+        <for(item in items)>
+            <ChartBox title=item.title text=item.text percent=item.percent />
+        </for>
+    </div>
+</div>
+
+<script>
+    window.chartData = {
+        labels: ["Team", "Advisor", "Partners", "Bounty", "Bes", "Reserves", "Foundation", "Pre-Sale", "Private Sale", "Public Sale"],
+        datasets: [{
+          data: [8, 5, 8, 2, 44, 4, 9, 5, 7.5, 7.5],
+          backgroundColor: [
+            'rgba(11, 11, 69, 0.1)',
+            'rgba(11, 11, 69, 0.15)',
+            'rgba(11, 11, 69, 0.17)',
+            'rgba(11, 11, 69, 0.2)',
+            'rgba(11, 11, 69, 0.1)',
+            'rgba(11, 11, 69, 0.25)',
+            'rgba(11, 11, 69, 0.16)',
+            'rgba(11, 11, 69, 0.27)',
+            'rgba(11, 11, 69, 0.21)',
+            'rgba(11, 11, 69, 0.14)',
+          ],
+        }],
+      };
+</script>

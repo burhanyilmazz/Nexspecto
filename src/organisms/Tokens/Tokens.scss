@@ -1,0 +1,46 @@
+.o-tokens {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  h3 {
+    font-size: rem(21px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: rem(5px);
+    text-align: center;
+    color: #92c5eb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:before {
+      content: "";
+      width: 2px;
+      height: 64px;
+      background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+    }
+  }
+
+  h2 {
+    font-size: rem(32px);
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 12px;
+    color: #0b0b45;
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    p {
+      font-size: rem(16px);
+      color: #8585a2;
+      width: calc(50% - 16px);
+      text-align: justify;
+      line-height: 1.75;
+    }
+  }
+}

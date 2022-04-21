@@ -1,0 +1,28 @@
+.m-chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding-bottom: 48px;
+
+  &__chart {
+    width: 40%;
+  }
+
+  &__boxes {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 710px;
+
+    .a-chart-box {
+      width: calc(50% - 16px);
+      margin-right: 32px;
+      margin-bottom: 32px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
