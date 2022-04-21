@@ -1,3 +1,4 @@
+import Sticky from "../../assets/scripts/Sticky";
 export default class Header {
   constructor(el, options) {
     this.$el = el;
@@ -24,6 +25,11 @@ export default class Header {
     this.$nav = this.$el.find(this.options.nav.self);
     this.$searchBar = $(this.options.search.self);
     this.$shadow = $(this.options.shadow);
+
+    this.sticky = new Sticky(el, {
+      prefix: "o-header",
+      onUnpin: () => this.onPinSticky()
+    });
 
     this.$el
       .on("click", this.options.nav.item, event => this.onClickDropdown(event))

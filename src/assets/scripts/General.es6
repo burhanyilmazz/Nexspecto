@@ -5,14 +5,11 @@ $(document).ready(() => {
   })
 
   var myFullpage = new fullpage('#fullpage', {
-    sectionsColor: ['#0b0b45', '#fff', '#0b0b45', '#fff', '#0b0b45',],
-    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+    sectionsColor: ['#0b0b45', '#fff', '#0b0b45', '#fff', '#0b0b45', '#0b0b45', '#0b0b45', '#0b0b45', '#fff'],
+    anchors: ['', 'presale', 'about', 'tokens', 'roadmap', 'team', 'faq', 'contact', ''],
     menu: '#menu',
-    slidesNavigation: true,
+    slidesNavigation: false,
     lazyLoad: true,
-    credits: {
-      enabled: false
-    }
   });
 
   var ctx = document.getElementById("myChart");

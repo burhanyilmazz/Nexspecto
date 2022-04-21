@@ -1,4 +1,11 @@
-$ const {renderBody, ...attrs} = input;
-<section class="section" ...attrs>
+$ { 
+  const {renderBody, ...attrs} = input;
+  const classes = ["section"];
+
+  if (input.class) {
+    classes.push(input.class);
+  }
+}
+<section class=classes>
   <include(input.renderBody)/>
 </section>

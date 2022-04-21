@@ -42,6 +42,7 @@ config.vendors = {};
 config.vendors.js = [
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/fancybox/dist/jquery.fancybox.min.js',
+  'bower_components/headroom/dist/headroom.js',
   'bower_components/parsleyjs/dist/parsley.min.js',
   'bower_components/parsleyjs/dist/i18n/tr.js',
   'bower_components/lazysizes/lazysizes.min.js',
