@@ -46,12 +46,11 @@ config.vendors.js = [
   'bower_components/parsleyjs/dist/i18n/tr.js',
   'bower_components/lazysizes/lazysizes.min.js',
   'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
-  'bower_components/fullpage.js/dist/fullpage.js',
+  'bower_components/headroom/dist/headroom.js',
   'src/assets/scripts/vendors/chart.min.js',
 ];
 config.vendors.css = [
   'bower_components/fancybox/dist/jquery.fancybox.min.css',
-  'bower_components/fullpage.js/dist/fullpage.min.css',
 ];
 
 module.exports = config;

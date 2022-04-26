@@ -10,6 +10,9 @@ import Accordion        from  '../../../src/molecules/Accordion/Accordion';
 import Modal            from  '../../../src/molecules/Modal/Modal';
 import TabDefault       from '../../../src/molecules/TabDefault/TabDefault';
 import Timeline         from  '../../../src/molecules/Timeline/Timeline';
+import LeftNav          from  '../../../src/molecules/LeftNav/LeftNav';
+import Nav              from  '../../../src/molecules/Nav/Nav';
+import Newsletter       from  '../../../src/molecules/Newsletter/Newsletter';
 
 import Header           from  '../../../src/organisms/Header/Header';
 
@@ -25,6 +28,9 @@ const Components = {
   Modal,
   TabDefault,
   Timeline,
+  LeftNav,
+  Nav,
+  Newsletter,
   
   Header,
 };

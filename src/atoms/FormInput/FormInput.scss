@@ -13,6 +13,7 @@
     font-weight: 500;
     letter-spacing: normal;
     height: 40px;
+    transition: all 0.5s ease;
 
     &::placeholder {
       color: #c2c2d0;
@@ -21,6 +22,11 @@
     &.parsley-error {
       border-color: $Monza;
       color: $Monza;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: #c2c2d0;
     }
   }
 

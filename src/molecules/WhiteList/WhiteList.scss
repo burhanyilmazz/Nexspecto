@@ -47,24 +47,21 @@
     z-index: 2;
   }
 
-  table {
-    th {
+  ul {
+    li {
+      display: flex;
       text-align: left;
       font-size: rem(21px);
-      font-weight: 500;
       line-height: 1.62;
       letter-spacing: normal;
+    }
+    span {
+      font-weight: 500;
+      width: 190px;
       &:nth-child(2) {
         width: 50px;
         text-align: center;
       }
-    }
-
-    td {
-      font-size: rem(21px);
-      font-weight: normal;
-      line-height: 1.62;
-      letter-spacing: normal;
     }
   }
 }

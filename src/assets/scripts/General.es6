@@ -4,14 +4,6 @@ $(document).ready(() => {
     smallBtn: true,
   })
 
-  var myFullpage = new fullpage('#fullpage', {
-    sectionsColor: ['#0b0b45', '#fff', '#0b0b45', '#fff', '#0b0b45', '#0b0b45', '#0b0b45', '#0b0b45', '#fff'],
-    anchors: ['', 'presale', 'about', 'tokens', 'roadmap', 'team', 'faq', 'contact', ''],
-    menu: '#menu',
-    slidesNavigation: false,
-    lazyLoad: true,
-  });
-
   var ctx = document.getElementById("myChart");
 
   var myChart = new Chart(ctx, {

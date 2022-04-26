@@ -18,8 +18,9 @@ $ {
     ]
 }
 <div class="o-about">
+    <LeftNav />
     <div class="container-fluid">
-        <div class="o-about__text">
+        <section class="o-about__text" id="inner-about">
             <div class="o-about-text__col">
                 <h3>what is nexspecto?</h3>
                 <h2>We created this platform so that users can save with their savings.</h2>
@@ -32,9 +33,9 @@ $ {
             <div class="o-about-text__col">
                 <Image src="../../assets/images/content/about.png" />
             </div>
-        </div>
+        </section>
 
-        <div class="o-about__lists">
+        <section class="o-about__lists" id="inner-features">
             <h3>what’s saving assets?</h3>
             <ul>
                 <li>
@@ -66,16 +67,16 @@ $ {
                     <p>Nexspecto allows the user to delay a paying installment for one period of installment. The user who has payment difficulties will not be out of the system immediately with this unique property. It gives one more chance to the user to be in the system.</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="o-about__cards">
+        <section class="o-about__cards" id="inner-advantages">
             <h3>why nexspecto is valuable?</h3>
             <div class="o-about-cards__list">
                 <for(item in items)>
                     <CardAbout src=item.src title=item.title text=item.text />
                 </for>
             </div>
-        </div>
+        </section>
     </div>
     <Video src="../../assets/videos/about.mp4" />
 </div>

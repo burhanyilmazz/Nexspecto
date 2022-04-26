@@ -17,6 +17,7 @@
     top: 0;
     left: 0;
     transition: all 0.5s ease;
+    animation: rotating 4s linear infinite;
 
     &:nth-child(2) {
       left: -15px;
@@ -34,12 +35,6 @@
     }
     &:nth-child(5) {
       left: 5px;
-    }
-  }
-
-  &:hover {
-    span {
-      animation: rotating 2s linear infinite;
     }
   }
 
@@ -79,6 +74,7 @@
       font-weight: 500;
       text-align: center;
       line-height: normal;
+      transition: all 0.5s ease;
 
       &:after {
         margin-top: 5px;
@@ -88,6 +84,15 @@
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-top: 8px solid #fff;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  &:hover {
+    .a-scroll-down-circle__ring {
+      &:after {
+        margin-top: 15px;
       }
     }
   }

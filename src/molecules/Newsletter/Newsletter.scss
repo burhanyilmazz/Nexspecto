@@ -49,6 +49,7 @@
     border-radius: 40px;
     position: relative;
     z-index: 1;
+    transition: all 0.5s ease;
 
     input {
       width: 100%;
@@ -56,11 +57,32 @@
       border-radius: 40px;
       height: 78px;
       padding: 28px 32px;
-      color: #8585a2;
+      color: #0b0b45;
       font-size: rem(16px);
+      transition: all 0.5s ease;
 
       &::placeholder {
         color: #c2c2d0;
+      }
+    }
+
+    &:hover {
+      background-image: linear-gradient(to left, #92c5eb, #92c5eb);
+      transition: all 0.5s ease;
+
+      & + button {
+        background-image: linear-gradient(to right, #92c5eb, #92c5eb);
+        transition: all 0.5s ease;
+      }
+    }
+
+    &[data-dirty="true"] {
+      background-image: linear-gradient(to left, #8b9916, #8b9916);
+      transition: all 0.5s ease;
+
+      & + button {
+        background-image: linear-gradient(to right, #8b9916, #8b9916);
+        transition: all 0.5s ease;
       }
     }
   }
@@ -77,6 +99,7 @@
     z-index: 2;
     top: 0;
     right: 0;
+    transition: all 0.5s ease;
     cursor: pointer;
 
     i {

@@ -1,3 +1,4 @@
+import Sticky from "../../assets/scripts/Sticky";
 export default class Header {
   constructor(el, options) {
     this.$el = el;
@@ -17,8 +18,12 @@ export default class Header {
     this.$hamburger = this.$el.find(this.options.hamburger);
     this.$nav = this.$el.find(this.options.nav.self);
 
+    this.sticky = new Sticky(el, {
+      prefix: "o-header",
+    });
+
     $(document)
-      .on("hamburger.click", (event) => this.onClickHamburger(event))
+      .on("hamburger.click", (event) => this.onClickHamburger(event));
 
   }
 

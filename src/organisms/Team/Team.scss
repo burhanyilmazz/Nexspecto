@@ -1,5 +1,6 @@
 .o-team {
   position: relative;
+  z-index: 2;
   &:after {
     content: "";
     position: absolute;
@@ -60,18 +61,4 @@
 		}
 	}
 
-  .container-fluid {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .a-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    opacity: .1;
-  }
 }
