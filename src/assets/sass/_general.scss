@@ -13,12 +13,6 @@ body {
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
-
-  @media screen and (max-width: 1280px) {
-    font-size: 10px;
-  }
-  
-  
 }
 
 html {

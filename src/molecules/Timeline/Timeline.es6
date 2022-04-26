@@ -35,7 +35,14 @@ export default class Timeline {
   onInit() {
     this.cardSize = this.$card.innerWidth();
 
-    this.$progressbar.width(this.$el[0].scrollWidth - 182)
+    let padLeft = 182;
+    const windowWidth = $(window).width();
+
+    if (windowWidth < 1366) {
+      padLeft = 142;
+    }
+
+    this.$progressbar.width(this.$el[0].scrollWidth - padLeft)
   }
 
   onClickRight(event) {

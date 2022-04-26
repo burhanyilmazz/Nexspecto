@@ -59,8 +59,16 @@
     color: #fff;
     margin-top: 80px;
 
+    @media screen and (max-width: 1280px) {
+      font-size: rem(17px);
+    }
+
     li {
       margin-right: 32px;
+
+      @media screen and (max-width: 1280px) {
+        margin-right: 20px;
+      }
 
       &:last-child {
         margin-right: 0;

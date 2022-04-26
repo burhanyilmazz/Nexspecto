@@ -7,6 +7,10 @@
   left: 0;
   bottom: 100px;
 
+  @media screen and (max-width: 1280px) {
+    transform: rotate(-90deg) translate(-300px, -190px);
+  }
+
   ul {
     display: inline-flex;
     flex-direction: row-reverse;

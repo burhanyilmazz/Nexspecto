@@ -117,26 +117,27 @@
 
   &__cards {
     margin-top: 80px;
+    padding-bottom: 80px;
   }
 
   &-cards {
     &__list {
       margin-top: 80px;
       display: flex;
-			justify-content: space-between;
+      justify-content: space-between;
 
-			.m-card-about {
-				width: calc(33% - 16px);
-				margin: 16px;
+      .m-card-about {
+        width: calc(33% - 16px);
+        margin: 16px;
 
-				&:first-child {
-					margin-top: 40px;
-				}
+        &:first-child {
+          transform: translateY(40px);
+        }
 
-				&:last-child {
-					margin-top: 80px;
-				}
-			}
+        &:last-child {
+          transform: translateY(80px);
+        }
+      }
     }
   }
 
@@ -147,6 +148,6 @@
     z-index: 1;
     left: 0;
     top: 0;
-    opacity: .1;
+    opacity: 0.1;
   }
 }

@@ -22,6 +22,14 @@
     font-size: rem(21px);
     font-weight: normal;
 
+    @media screen and (max-width: 1400px) {
+      padding: 2px 80px;
+    }
+
+    @media screen and (max-width: 1380px) {
+      padding: 2px 40px;
+    }
+
     b {
       font-size: rem(21px);
       font-weight: 500;
