@@ -1,4 +1,7 @@
 .m-other-nav {
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
   ul {
     display: flex;
     align-items: center;
@@ -13,6 +16,9 @@
         color: #fff;
         padding: 0 15px;
         position: relative;
+        @media screen and (max-width: 1024px) {
+          padding: 0 10px;
+        }
       }
 
       &:last-child {

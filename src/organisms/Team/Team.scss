@@ -55,8 +55,13 @@
 		width: 100%;
 		margin: 82px 0 112px;
 
+
 		.m-card-user {
 			width: calc(25% - 32px);
+
+      @media screen and (max-width: 990px) {
+        width: calc(33% - 32px);
+      }
 			margin: 46px 16px;
 		}
 	}

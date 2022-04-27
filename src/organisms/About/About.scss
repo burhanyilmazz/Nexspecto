@@ -33,12 +33,17 @@
     line-height: normal;
     color: #fff;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1024px) {
+      font-size: rem(28px);
+    }
   }
 
   &__text {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     img {
       max-width: 100%;
@@ -61,8 +66,31 @@
   &-text {
     &__col {
       width: 50%;
+      order: 1;
+
+      @media screen and (max-width: 1024px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 990px) {
+        width: 100%;
+        order: 2;
+        margin-top: 32px;
+      }
       &:last-child {
         text-align: center;
+        order: 2;
+
+        @media screen and (max-width: 1024px) {
+          width: 30%;
+          text-align: right;
+        }
+
+        @media screen and (max-width: 990px) {
+          width: 100%;
+          text-align: center;
+          order: 1;
+          margin: 0;
+        }
       }
     }
   }

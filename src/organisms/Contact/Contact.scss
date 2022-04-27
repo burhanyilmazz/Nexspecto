@@ -63,11 +63,19 @@
       font-size: rem(17px);
     }
 
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+    }
+
     li {
       margin-right: 32px;
 
       @media screen and (max-width: 1280px) {
         margin-right: 20px;
+      }
+
+      @media screen and (max-width: 990px) {
+        margin: 12px 0;
       }
 
       &:last-child {
@@ -78,6 +86,11 @@
         display: flex;
         align-items: center;
         color: #fff;
+
+        @media screen and (max-width: 990px) {
+          flex-direction: column;
+        }
+
         span {
           display: inline-flex;
           width: 60px;
@@ -87,6 +100,10 @@
           justify-content: center;
           background-image: linear-gradient(to right, #92c5eb, #8b9916);
           margin-right: 16px;
+          @media screen and (max-width: 990px) {
+            margin-bottom: 8px;
+            margin-right: 0px;
+          }
           i {
             color: #fff;
             font-size: rem(24px);
@@ -99,11 +116,21 @@
   &__form {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 80px;
+    flex-wrap: wrap;
 
     img {
       width: 100%;
       max-width: 543px;
+
+      @media screen and (max-width: 1024px) {
+        max-width: 360px
+      }
+
+      @media screen and (max-width: 990px) {
+        max-width: 100%
+      }
     }
 
     .m-form-group {
@@ -118,6 +145,14 @@
 
     .m-form {
       width: calc(100% - 600px);
+
+      @media screen and (max-width: 1024px) {
+        width: calc(100% - 400px);
+      }
+
+      @media screen and (max-width: 990px) {
+        width: 100%
+      }
     }
 
     .a-btn {

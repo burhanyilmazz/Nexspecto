@@ -54,6 +54,10 @@
       font-size: rem(21px);
       line-height: 1.62;
       letter-spacing: normal;
+
+      @media screen and (max-width: 1024px) {
+        font-size: rem(19px);
+      }
     }
     span {
       font-weight: 500;
