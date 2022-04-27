@@ -1,6 +1,9 @@
 .o-team {
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  width: 100%;
+
   &:after {
     content: "";
     position: absolute;
@@ -10,6 +13,86 @@
     width: 100%;
     background-image: linear-gradient(to right, #92c5eb, #8b9916);
     opacity: 0.4;
+  }
+
+  &__control {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: rem(16px);
+    font-weight: 500;
+    color: #fff;
+    left: 0;
+    position: sticky;
+    margin-top: 32px;
+
+    @media screen and (max-width: 990px) {
+      display: flex;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin: 0 16px;
+
+      .m-ring {
+        background-image: linear-gradient(to right, #92c5eb, #8b9916);
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        padding: 2px;
+        margin-right: 32px;
+        span {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #0b0b45;
+          position: relative;
+          z-index: 2;
+
+          i {
+            &:before {
+              font-size: rem(16px);
+            }
+          }
+        }
+
+        &:after {
+          content: "";
+          width: 16px;
+          height: 2px;
+          background-color: #fff;
+          z-index: 3;
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+
+      &:first-child {
+        .m-ring {
+          margin-right: 0;
+          margin-left: 32px;
+        }
+        span {
+          i {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
   }
 
   h3 {
@@ -55,14 +138,38 @@
 		width: 100%;
 		margin: 82px 0 112px;
 
+    &::-webkit-scrollbar {
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    @media screen and (max-width: 990px) {
+      overflow: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      display: -webkit-box;
+      margin: 20px -35px;
+      width: 100vw;
+    }
 
 		.m-card-user {
 			width: calc(25% - 32px);
+      margin: 46px 16px;
 
       @media screen and (max-width: 990px) {
-        width: calc(33% - 32px);
+        width: 268px;
+        scroll-snap-align: center;
       }
-			margin: 46px 16px;
 		}
 	}
 

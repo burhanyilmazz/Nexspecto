@@ -15,6 +15,7 @@ import Nav              from  '../../../src/molecules/Nav/Nav';
 import Newsletter       from  '../../../src/molecules/Newsletter/Newsletter';
 
 import Header           from  '../../../src/organisms/Header/Header';
+import Team             from  '../../../src/organisms/Team/Team';
 
 const Components = {
   LazyLoad,
@@ -33,6 +34,7 @@ const Components = {
   Newsletter,
   
   Header,
+  Team,
 };
 
 function buildComponent( that, type, data ) {

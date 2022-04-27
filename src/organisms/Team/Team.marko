@@ -66,6 +66,11 @@ const advisors = [
         <h2>THE LEADERSHIP TEAM</h2>
         <p>Meet the them</p>
 
+        <ul class="o-team__control" data-component="Team">
+            <li class="o-team__control--left disabled">BACK<div class="m-ring"><span><IconFont icon="right" /></span></div></li>
+            <li class="o-team__control--right"><div class="m-ring"><span><IconFont icon="right" /></span></div>NEXT</li>
+        </ul>
+
         <div class="o-team__list">
             <for(team in teams)>
                 <CardUser src=team.src title=team.title name=team.name />
@@ -74,6 +79,11 @@ const advisors = [
 
         <h2>ADVISORS</h2>
         <p>Meet the them</p>
+
+        <ul class="o-team__control" data-component="Team">
+            <li class="o-team__control--left disabled">BACK<div class="m-ring"><span><IconFont icon="right" /></span></div></li>
+            <li class="o-team__control--right"><div class="m-ring"><span><IconFont icon="right" /></span></div>NEXT</li>
+        </ul>
 
         <div class="o-team__list">
             <for(advisor in advisors)>

@@ -55,12 +55,25 @@
   &__image {
     position: absolute;
     bottom: 84px;
+    @media screen and (max-width: 990px) {
+      display: none;
+    }
 
     &--1 {
       left: -136px;
     }
     &--2 {
       right: -136px;
+    }
+    &--3 {
+      position: relative;
+      bottom: auto;
+      max-width: 100%;
+      display: none;
+      margin: auto;
+      @media screen and (max-width: 990px) {
+        display: block;
+      }
     }
   }
 }
