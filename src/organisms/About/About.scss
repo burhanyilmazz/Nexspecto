@@ -211,17 +211,17 @@
         }
 
         &:first-child {
-          transform: translateY(40px);
+          top: 40px;
 
           @media screen and (max-width: 640px) {
-            transform: translateY(0px);
+            top: 0;
           }
         }
 
         &:last-child {
-          transform: translateY(80px);
+          top: 80px;
           @media screen and (max-width: 640px) {
-            transform: translateY(0px);
+            top: 0;
           }
         }
       }

@@ -4,6 +4,9 @@
   left: 50%;
   margin-left: -43px;
   cursor: pointer;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
 
   span {
     content: "";
