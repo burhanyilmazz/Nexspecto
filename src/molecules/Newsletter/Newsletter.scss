@@ -16,12 +16,21 @@
     justify-content: center;
     flex-direction: column;
 
+    @media screen and (max-width: 640px) {
+      font-size: rem(28px);
+    }
+
     &:before {
       content: "";
       width: 2px;
       height: 64px;
       background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
       margin-bottom: 12px;
+
+      @media screen and (max-width: 640px) {
+        height: 32px;
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -29,13 +38,23 @@
     font-size: rem(16px);
     text-align: center;
     color: #8585a2;
-		margin-top: 24px;
+    margin-top: 24px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(14px);
+      line-height: 2;
+      margin: 8px auto;
+    }
   }
 
   .m-form {
     width: 100%;
     position: relative;
-		margin-top: 48px;
+    margin-top: 48px;
+
+    @media screen and (max-width: 640px) {
+      margin-top: 10px;
+    }
 
     .parsley-errors-list {
       position: absolute;
@@ -60,6 +79,10 @@
       color: #0b0b45;
       font-size: rem(16px);
       transition: all 0.5s ease;
+
+      @media screen and (max-width: 640px) {
+        height: 58px;
+      }
 
       &::placeholder {
         color: #c2c2d0;
@@ -101,6 +124,11 @@
     right: 0;
     transition: all 0.5s ease;
     cursor: pointer;
+
+    @media screen and (max-width: 640px) {
+      width: 60px;
+      height: 60px;
+    }
 
     i {
       color: #fff;

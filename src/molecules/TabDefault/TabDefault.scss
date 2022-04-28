@@ -13,10 +13,38 @@
     width: 100%;
     margin-bottom: 80px;
 
+    @media screen and (max-width: 640px) {
+      overflow: auto;
+      justify-content: flex-start;
+      margin-left: -12px;
+      margin-right: -32px;
+      width: 100vw;
+      margin-bottom: 60px;
+
+      &::-webkit-scrollbar {
+        background-color: transparent;
+      }
+    
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+
     &--desc {
       position: relative;
       font-size: rem(16px);
       margin: 0 16px;
+
+      @media screen and (max-width: 640px) {
+        margin: 0 12px;
+      }
 
       > div {
         width: 100%;
@@ -35,6 +63,10 @@
         background: #8585a2;
         padding: 2px;
         position: relative;
+
+        @media screen and (max-width: 640px) {
+          width: 200px;
+        }
       }
 
       &.m-tab-default__item--active {

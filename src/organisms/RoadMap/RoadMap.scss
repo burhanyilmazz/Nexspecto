@@ -2,6 +2,10 @@
   position: relative;
   padding-bottom: 80px;
   z-index: 2;
+  @media screen and (max-width: 640px) {
+    padding-bottom: 60px;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -24,11 +28,20 @@
     align-items: center;
     flex-direction: column;
 
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      letter-spacing: 3.81px;
+    }
+
     &:before {
       content: "";
       width: 2px;
       height: 64px;
       background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+
+      @media screen and (max-width: 640px) {
+        height: 32px;
+      }
     }
   }
 
@@ -39,5 +52,10 @@
     text-align: center;
     color: #fff;
     margin-top: 12px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(28px);
+      margin-top: 8px;
+    }
   }
 }

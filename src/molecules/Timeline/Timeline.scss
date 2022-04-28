@@ -8,6 +8,11 @@
     padding-left: 100px;
   }
 
+  @media screen and (max-width: 640px) {
+    padding-left: 32px;
+    padding-top: 32px;
+  }
+
   &::-webkit-scrollbar {
     background-color: transparent;
   }
@@ -33,6 +38,14 @@
     color: #fff;
     left: 0;
     position: sticky;
+
+    @media screen and (max-width: 1360px) {
+      width: calc(100% - 100px);
+    }
+
+    @media screen and (max-width: 640px) {
+      width: calc(100% - 32px);
+    }
 
     li {
       position: relative;
@@ -101,6 +114,10 @@
   &__progress {
     position: relative;
     margin-top: 160px;
+
+    @media screen and (max-width: 640px) {
+      margin-top: 64px;
+    }
 
     ul {
       display: flex;
@@ -174,9 +191,12 @@
       display: flex;
       > li {
         margin-right: 32px;
+        @media screen and (max-width: 640px) {
+          margin-right: 24px;
+        }
 
         h6 {
-          font-size: 16px;
+          font-size: rem(16px);
           font-weight: normal;
           line-height: normal;
           text-align: center;

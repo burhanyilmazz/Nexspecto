@@ -105,12 +105,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      letter-spacing: 3.81px;
+    }
 
     &:before {
       content: "";
       width: 2px;
       height: 64px;
       background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+
+      @media screen and (max-width: 640px) {
+        height: 32px;
+      }
     }
   }
 
@@ -121,31 +129,44 @@
     text-align: center;
     color: #fff;
     margin-top: 12px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(28px);
+      margin-top: 8px;
+    }
   }
+
   p {
     font-size: rem(16px);
     text-align: center;
     color: #8585a2;
     margin: 12px auto;
     width: 50%;
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      font-size: rem(14px);
+      line-height: 2;
+      margin: 8px auto;
+    }
   }
 
-	&__list {
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 100%;
-		margin: 82px 0 112px;
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 82px 0 112px;
 
     &::-webkit-scrollbar {
       background-color: transparent;
     }
-  
+
     &::-webkit-scrollbar-track {
       background-color: transparent;
     }
-  
+
     &::-webkit-scrollbar-thumb {
       background-color: transparent;
     }
@@ -162,15 +183,18 @@
       width: 100vw;
     }
 
-		.m-card-user {
-			width: calc(25% - 32px);
+    @media screen and (max-width: 640px) {
+      margin-bottom: 0;
+    }
+
+    .m-card-user {
+      width: calc(25% - 32px);
       margin: 46px 16px;
 
       @media screen and (max-width: 990px) {
         width: 268px;
         scroll-snap-align: center;
       }
-		}
-	}
-
+    }
+  }
 }

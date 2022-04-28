@@ -5,6 +5,11 @@
   padding-bottom: 48px;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 640px) {
+    margin-top: 32px;
+    padding-bottom: 32px;
+  }
+
   &__chart {
     width: 40%;
 
@@ -15,14 +20,8 @@
 
   &__boxes {
     width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-height: 710px;
-
-    @media screen and (max-width: 1320px) {
-      max-height: 790px;
-    }
+    column-count: 2;
+    column-gap: 32px;
 
     @media screen and (max-width: 990px) {
       width: 100%;
@@ -30,13 +29,11 @@
     }
 
     .a-chart-box {
-      width: calc(50% - 16px);
-      margin-right: 32px;
+      width: 100%;
       margin-bottom: 32px;
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+      display: grid;
+      grid-template-rows: 1fr auto;
+      break-inside: avoid;
     }
   }
 }

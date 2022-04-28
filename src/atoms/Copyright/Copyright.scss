@@ -9,6 +9,11 @@
   justify-content: center;
   background: #fff;
 
+  @media screen and (max-width: 640px) {
+    font-size: rem(14px);
+    height: 52px;
+  }
+
   &:after {
     content: '';
     position: absolute;

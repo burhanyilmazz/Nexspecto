@@ -2,6 +2,10 @@
   margin-top: 32px;
   width: 100%;
 
+  @media screen and (max-width: 640px) {
+    margin-top: 24px;
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -9,6 +13,10 @@
     font-size: rem(16px);
     font-weight: normal;
     color: #8b9916;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(14px);
+    }
 
     span {
       margin-right: 5px;
@@ -26,6 +34,11 @@
     margin-top: 15px;
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: 640px) {
+      height: 30px;
+      margin-top: 16px;
+    }
 
     span {
       width: 2px;
@@ -71,6 +84,11 @@
     position: relative;
     z-index: 2;
     margin-top: 29px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(14px);
+      margin-top: 24px;
+    }
 
     li {
       width: 33.33%;

@@ -5,6 +5,10 @@
   width: 100vw;
   padding-bottom: 70px;
 
+  @media screen and (max-width: 640px) {
+    padding-bottom: 31px;
+  }
+
   h2 {
     font-size: rem(21px);
     font-weight: 500;
@@ -16,11 +20,19 @@
     align-items: center;
     flex-direction: column;
 
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+    }
+
     &:before {
       content: "";
       width: 2px;
       height: 64px;
       background-image: linear-gradient(to bottom, #92c5eb, #8b9916);
+
+      @media screen and (max-width: 640px) {
+        height: 32px;
+      }
     }
   }
 
@@ -31,6 +43,10 @@
     letter-spacing: normal;
     text-align: center;
     color: #0b0b45;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(28px);
+    }
   }
 
   h3 {
@@ -42,6 +58,11 @@
     text-align: center;
     color: #8b9916;
     margin-top: 32px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      margin-top: 24px;
+    }
   }
 
   .container {
@@ -61,6 +82,11 @@
       justify-content: center;
       margin-top: 32px;
       flex-wrap: wrap;
+
+      @media screen and (max-width: 640px) {
+        font-size: rem(16px);
+        margin-top: 24px;
+      }
 
       li {
         &:before {
@@ -82,9 +108,16 @@
     text-align: center;
     color: #8585a2;
     margin-top: 24px;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(14px);
+    }
   }
 
   .a-btn {
     margin-top: 34px;
+    @media screen and (max-width: 640px) {
+      margin-top: 24px;
+    }
   }
 }

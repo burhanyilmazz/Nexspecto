@@ -3,6 +3,10 @@
   padding: 80px 0;
   background-image: linear-gradient(242deg, #0b0b45, #131361 52%, #484874);
 
+  @media screen and (max-width: 640px) {
+    padding: 32px 0;
+  }
+
   .container-fluid {
     position: relative;
     z-index: 2;
@@ -18,12 +22,22 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      letter-spacing: 3.81px;
+    }
+
     &:before {
       content: "";
       width: 68px;
       height: 2px;
       background-image: linear-gradient(to right, #92c5eb, #8b9916);
       margin-right: 32px;
+
+      @media screen and (max-width: 640px) {
+        width: 32px;
+        margin-right: 16px;
+      }
     }
   }
 
@@ -60,6 +74,11 @@
       letter-spacing: normal;
       color: #fff;
       margin-top: 24px;
+
+      @media screen and (max-width: 640px) {
+        font-size: rem(14px);
+        line-height: 2;
+      }
     }
   }
 
@@ -99,14 +118,27 @@
     margin-top: 34px;
     ul {
       margin-top: 80px;
+
+      @media screen and (max-width: 640px) {
+        margin-top: 32px;
+      }
+
       li {
         display: flex;
         justify-content: space-between;
         padding: 32px 0;
         position: relative;
 
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          padding: 24px 0;
+        }
+
         h2 {
           width: 50%;
+          @media screen and (max-width: 640px) {
+            width: 100%;
+          }
         }
 
         p {
@@ -116,6 +148,12 @@
           font-weight: normal;
           line-height: 1.75;
           letter-spacing: normal;
+          @media screen and (max-width: 640px) {
+            width: 100%;
+            margin-top: 24px;
+            font-size: rem(14px);
+            line-height: 2;
+          }
         }
 
         &:before {
@@ -146,6 +184,10 @@
   &__cards {
     margin-top: 80px;
     padding-bottom: 80px;
+    @media screen and (max-width: 640px) {
+      margin-top: 32px;
+      padding-bottom: 0;
+    }
   }
 
   &-cards {
@@ -154,16 +196,33 @@
       display: flex;
       justify-content: space-between;
 
+      @media screen and (max-width: 640px) {
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+
       .m-card-about {
         width: calc(33% - 16px);
         margin: 16px;
 
+        @media screen and (max-width: 640px) {
+          width: 100%;
+          margin: 16px 0;
+        }
+
         &:first-child {
           transform: translateY(40px);
+
+          @media screen and (max-width: 640px) {
+            transform: translateY(0px);
+          }
         }
 
         &:last-child {
           transform: translateY(80px);
+          @media screen and (max-width: 640px) {
+            transform: translateY(0px);
+          }
         }
       }
     }

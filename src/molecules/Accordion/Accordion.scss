@@ -36,6 +36,12 @@
     p {
       margin-bottom: rem(24px);
 
+      @media screen and (max-width: 640px) {
+        font-size: rem(14px);
+        line-height: 2;
+        width: 80%;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -63,9 +69,21 @@
     );
     border-image-slice: 1;
 
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      line-height: normal;
+      padding: 15px 0;
+    }
+
+    span {
+      width: calc(100% - 40px);
+    }
+
     i {
       position: absolute;
       right: 0;
+      top: 50%;
+      margin-top: -12px;
     }
 
     &--active {

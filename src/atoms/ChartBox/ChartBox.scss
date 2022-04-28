@@ -71,6 +71,10 @@
     font-weight: normal;
     color: #0b0b45;
 		transition: all 0.5s ease;
+    @media screen and (max-width: 640px) {
+      font-size: rem(16px);
+      margin-top: 8px;
+    }
   }
 
   h6 {
@@ -80,6 +84,12 @@
     color: #8585a2;
     margin-top: 4px;
 		transition: all 0.5s ease;
+
+    @media screen and (max-width: 640px) {
+      font-size: rem(14px);
+      margin-top: 8px;
+      line-height: 2;
+    }
   }
 
   span {
@@ -92,6 +102,13 @@
 		transition: all 0.5s ease;
 
     @media screen and (max-width: 1360px) {
+      font-size: rem(28px);
+    }
+
+    @media screen and (max-width: 640px) {
+      position: relative;
+      right: auto;
+      top: auto;
       font-size: rem(28px);
     }
   }
