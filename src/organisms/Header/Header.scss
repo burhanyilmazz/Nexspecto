@@ -28,16 +28,43 @@
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -1px;
     height: 1px;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(146, 197, 235, 0), #92c5eb 10%, #8da758 91%, rgba(139, 153, 22, 0));
+    background-image: linear-gradient(
+      to right,
+      rgba(146, 197, 235, 0),
+      #92c5eb 10%,
+      #8da758 91%,
+      rgba(139, 153, 22, 0)
+    );
 
     @media screen and (max-width: 990px) {
       display: none;
+    }
+  }
+
+  &__nav {
+    width: calc(100% - 174px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 990px) {
+      opacity: 0;
+      width: 100%;
+      position: fixed;
+      top: 70px;
+      height: calc(100vh - 70px);
+      background: #fff;
+      z-index: 10;
+      flex-direction: column;
+      will-change: transform;
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(100%);
     }
   }
 
@@ -51,6 +78,60 @@
       top: 0;
       width: rem(60px);
       height: rem(70px);
+    }
+  }
+
+  .m-social-media {
+    display: none;
+    position: relative;
+    margin: 0;
+    padding: 24px 0;
+
+    &:before {
+      width: 100%;
+      height: 2px;
+      content: "";
+      opacity: 0.4;
+      background-image: linear-gradient(to right, #92c5eb, #8b9916);
+      position: absolute;
+      top: 0;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        a {
+          background-image: linear-gradient(to right, #92c5eb, #8b9916);
+        }
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+      display: block;
+      order: 3;
+    }
+  }
+
+  .m-nav {
+    @media screen and (max-width: 990px) {
+      order: 2;
+    }
+  }
+
+  .m-other-nav {
+    @media screen and (max-width: 990px) {
+      order: 1;
+    }
+  }
+
+  &--opened {
+    .o-header {
+      &__nav {
+        opacity: 1;
+        transform: translateX(-32px);
+        z-index: 10;
+        transition: transform 0.5s ease-in-out;
+      }
     }
   }
 }

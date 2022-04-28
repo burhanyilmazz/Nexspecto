@@ -1,16 +1,37 @@
 .m-nav {
+  width: calc(100% - 270px);
+  display: flex;
+  justify-content: center;
+
   @media screen and (max-width: 990px) {
-    display: none;
+    width: 100%;
+    height: calc(100% - 196px);
   }
+
   ul {
     display: flex;
     align-items: center;
     font-size: rem(16px);
     font-weight: 500;
+
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      text-transform: uppercase;
+      font-size: rem(28px);
+      font-weight: 600;
+      justify-content: space-evenly;
+    }
     li {
+      @media screen and (max-width: 990px) {
+        padding: 6px 0;
+      }
       a {
         color: #8585a2;
         padding: 0 16px;
+
+        @media screen and (max-width: 990px) {
+          color: #0b0b45;
+        }
 
         @media screen and (max-width: 1200px) {
           padding: 0 10px;
@@ -19,7 +40,7 @@
         @media screen and (max-width: 1024px) {
           padding: 0 8px;
         }
-        
+
         &:hover {
           transition: all 0.5s ease;
           color: #fff;
@@ -29,9 +50,12 @@
       &.active {
         a {
           color: #fff !important;
+
+          @media screen and (max-width: 990px) {
+            color: #0b0b45 !important;
+          }
         }
       }
     }
-    
   }
 }
