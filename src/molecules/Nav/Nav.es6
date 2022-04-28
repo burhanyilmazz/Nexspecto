@@ -5,6 +5,7 @@ export default class Nav {
     const defaults = {
       anchor: {
         self: ".m-nav li",
+        link: "li a",
         active: "active"
       }
     };
@@ -12,7 +13,7 @@ export default class Nav {
     this.options = $.extend({}, defaults, options);
 
     this.$el
-      .on("click", this.options.anchor.self, event => this.onClickNav(event))
+      .on("click", this.options.anchor.link, event => this.onClickNav(event))
 
     $(document).on("scroll", event => this.onScroll(event))
 
@@ -21,11 +22,11 @@ export default class Nav {
   onClickNav(event) {
     event.preventDefault();
     const $target = $(event.currentTarget);
-    const $hash = $($target.find("a").attr("href"))
+    const $hash = $($target.attr("href"))
     $target.addClass(this.options.anchor.active).siblings().removeClass(this.options.anchor.active)
 
     $('html, body').animate({
-      scrollTop: $hash.offset().top - 50
+      scrollTop: $hash.offset().top
     }, 500);
   }
 

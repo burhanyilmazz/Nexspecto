@@ -47,6 +47,7 @@ config.vendors.js = [
   'bower_components/lazysizes/lazysizes.min.js',
   'bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
   'bower_components/headroom/dist/headroom.js',
+  'src/assets/scripts/vendors/lax.js',
   'src/assets/scripts/vendors/chart.min.js',
 ];
 config.vendors.css = [
