@@ -21,6 +21,8 @@ export default class Nav {
 
   onClickNav(event) {
     event.preventDefault();
+    $("html").removeClass("disable-scroll");
+    $(".o-header").removeClass("o-header--opened");
     const $target = $(event.currentTarget);
     const $hash = $($target.attr("href"))
     $target.addClass(this.options.anchor.active).siblings().removeClass(this.options.anchor.active)
