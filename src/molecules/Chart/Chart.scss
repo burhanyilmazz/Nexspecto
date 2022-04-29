@@ -16,6 +16,11 @@
     @media screen and (max-width: 990px) {
       width: 100%;
     }
+
+    canvas {
+      overflow: hidden;
+      border-radius: 100%;
+    }
   }
 
   &__boxes {

@@ -44,11 +44,38 @@ $(document).ready(() => {
   });
 
   $(document)
-    .on('mouseleave mouseout', "#myChart", () => {
-      $(".a-chart-box").map((index, item) => $(item).removeClass("a-chart-box--active"))
+    .on('mouseleave mouseout', "#myChart", () => $(".a-chart-box").removeClass("a-chart-box--active"))
+    .on('mouseenter mouseover', ".o-tokens", () => $(".a-chart-box").removeClass("a-chart-box--active"))
+    .on('mouseenter', '.a-chart-box', (event) => {
+      event.preventDefault();
+      const $target = $(event.currentTarget)
+      const targetIndex = $target.index() || 0;
+
+      $(".a-chart-box").removeClass("a-chart-box--active");
+
+      setTimeout(() => {
+        $target.addClass("a-chart-box--active");
+        myChart.setActiveElements([{
+          datasetIndex: 0,
+          index: targetIndex
+        }])
+
+        myChart.tooltip.setActiveElements([{
+          datasetIndex: 0,
+          index: targetIndex
+        }])
+
+        myChart.update();
+      }, 100);
     })
-    .on('mouseenter mouseover', ".o-tokens", () => {
-      $(".a-chart-box").map((index, item) => $(item).removeClass("a-chart-box--active"))
+    .on('mouseleave mouseout', '.a-chart-box', (event) => {
+      event.preventDefault();
+      $(".a-chart-box").removeClass("a-chart-box--active");
+
+      myChart.setActiveElements([{}])
+      myChart.tooltip.setActiveElements([{}])
+
+      myChart.update();
     })
 
 });

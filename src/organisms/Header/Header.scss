@@ -62,9 +62,8 @@
       background: #fff;
       z-index: 10;
       flex-direction: column;
-      will-change: transform;
-      transition: transform 0.5s ease-in-out;
-      transform: translateX(100%);
+      transition: all 0.5s ease-in-out;
+      left: 100%;
     }
   }
 
@@ -129,9 +128,9 @@
     .o-header {
       &__nav {
         opacity: 1;
-        transform: translateX(-32px);
+        left: 0;
+        //transform: translateX(-32px);
         z-index: 10;
-        transition: transform 0.5s ease-in-out;
       }
     }
   }
