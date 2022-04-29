@@ -58,6 +58,7 @@
           z-index: 2;
 
           i {
+            color: #fff;
             &:before {
               font-size: rem(16px);
             }
@@ -91,6 +92,29 @@
 
       &.disabled {
         opacity: 0.4;
+      }
+
+      &.disabled {
+        opacity: 0.4;
+        color: #fff !important;
+      }
+
+      &:active:not(.disabled),
+      &:focus:not(.disabled) {
+        color: #8585a2;
+
+        .m-ring {
+          width: 36px;
+          height: 36px;
+          margin-right: 38px;
+        }
+
+        &:first-child {
+          .m-ring {
+            margin-right: 0;
+            margin-left: 38px;
+          }
+        }
       }
     }
   }

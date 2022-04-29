@@ -34,6 +34,24 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        transition: all 0.3s ease;
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid #fff;
+          margin-top: 40px;
+          transition: all 0.1s ease;
+          opacity: 0;
+        }
+
+        &:hover {
+          color: #c2c2d0;
+        }
       }
 
       &:before {
@@ -48,14 +66,7 @@
         a {
           color: #fff;
           &:after {
-            position: absolute;
-            content: "";
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 8px solid #fff;
-            margin-top: 40px;
+            opacity: 1;
           }
         }
       }

@@ -148,6 +148,8 @@
           font-weight: normal;
           line-height: 1.75;
           letter-spacing: normal;
+          transition: all 0.5s ease;
+          
           @media screen and (max-width: 640px) {
             width: 100%;
             margin-top: 24px;
@@ -175,6 +177,12 @@
             background-image: linear-gradient(to right, #92c5eb, #8b9916);
             position: absolute;
             bottom: 0;
+          }
+        }
+
+        &:hover {
+          p {
+            color: #fff;
           }
         }
       }
