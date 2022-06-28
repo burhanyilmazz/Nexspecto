@@ -79,6 +79,7 @@
 
           i {
             color: #fff;
+            margin-right: -3px;
             &:before {
               font-size: rem(16px);
             }
@@ -106,6 +107,8 @@
         span {
           i {
             transform: rotate(-180deg);
+            margin-left: -3px;
+            margin-right: 0;
           }
         }
       }

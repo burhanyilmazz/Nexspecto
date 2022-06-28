@@ -24,8 +24,9 @@ export default class Nav {
     $("html").removeClass("disable-scroll");
     $(".o-header").removeClass("o-header--opened");
     const $target = $(event.currentTarget);
-    const $hash = $($target.attr("href"))
-    $target.addClass(this.options.anchor.active).siblings().removeClass(this.options.anchor.active)
+    const $hash = $($target.attr("href"));
+    $target.addClass(this.options.anchor.active).siblings().removeClass(this.options.anchor.active);
+    $(".a-hamburger").removeClass("a-hamburger--open");
 
     $('html, body').animate({
       scrollTop: $hash.offset().top

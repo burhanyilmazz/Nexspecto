@@ -59,6 +59,7 @@
 
           i {
             color: #fff;
+            margin-right: -3px;
             &:before {
               font-size: rem(16px);
             }
@@ -86,6 +87,8 @@
         span {
           i {
             transform: rotate(-180deg);
+            margin-left: -3px;
+            margin-right: 0;
           }
         }
       }
@@ -201,6 +204,7 @@
     @media screen and (max-width: 990px) {
       overflow: auto;
       flex-wrap: nowrap;
+      scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
       display: -webkit-box;
       margin: 20px -35px;
